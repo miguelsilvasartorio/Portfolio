@@ -111,7 +111,7 @@ class AppleNav extends HTMLElement {
             
             <nav id="navbar">
                 <div class="nav-container">
-                    <a href="#" class="logo">MS.</a>
+                    <a href="#" class="logo">MSartório</a>
                     <ul class="nav-links">
                         <li><a href="#sobre">Sobre mim</a></li>
                         <li><a href="#servicos">Serviços</a></li>
