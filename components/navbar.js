@@ -1,17 +1,17 @@
 class AppleNav extends HTMLElement {
-    constructor() {
-        super();
-        this.isVisible = false;
-    }
+  constructor() {
+    super();
+    this.isVisible = false;
+  }
 
-    connectedCallback() {
-        this.attachShadow({ mode: 'open' });
-        this.render();
-        this.setupEventListeners();
-    }
+  connectedCallback() {
+    this.attachShadow({ mode: "open" });
+    this.render();
+    this.setupEventListeners();
+  }
 
-    render() {
-        this.shadowRoot.innerHTML = `
+  render() {
+    this.shadowRoot.innerHTML = `
             <style>
                 :host {
                     --nav-height: 64px;
@@ -57,7 +57,10 @@ class AppleNav extends HTMLElement {
                 .logo {
                     font-size: 18px;
                     font-weight: 600;
-                    color: #171717;
+                    background: linear-gradient(to right, #3b82f6, #a855f7, #6366f1);
+                    -webkit-background-clip: text;
+                    -webkit-text-fill-color: transparent;
+                    background-clip: text;
                     text-decoration: none;
                     letter-spacing: -0.02em;
                     font-family: 'Inter', system-ui, -apple-system, sans-serif;
@@ -99,12 +102,20 @@ class AppleNav extends HTMLElement {
                 }
                 
                 @media (max-width: 768px) {
+                    .nav-container {
+                        padding: 0 12px;
+                    }
+                    
+                    .logo {
+                        font-size: 15px;
+                    }
+                    
                     .nav-links {
-                        gap: 20px;
+                        gap: 8px;
                     }
                     
                     .nav-links a {
-                        font-size: 13px;
+                        font-size: 11px;
                     }
                 }
             </style>
@@ -115,31 +126,32 @@ class AppleNav extends HTMLElement {
                     <ul class="nav-links">
                         <li><a href="#sobre">Sobre mim</a></li>
                         <li><a href="#servicos">Serviços</a></li>
+                        <li><a href="#projetos">Projetos</a></li>
                         <li><a href="#experiencias">Experiências</a></li>
                         <li><a href="#contato">Contato</a></li>
                     </ul>
                 </div>
             </nav>
         `;
-    }
+  }
 
-    setupEventListeners() {
-        const nav = this.shadowRoot.querySelector('#navbar');
-        let lastScroll = 0;
-        
-        window.addEventListener('scroll', () => {
-            const currentScroll = window.pageYOffset;
-            const heroHeight = window.innerHeight * 0.8;
-            
-            if (currentScroll > heroHeight) {
-                nav.classList.add('visible');
-            } else {
-                nav.classList.remove('visible');
-            }
-            
-            lastScroll = currentScroll;
-        });
-    }
+  setupEventListeners() {
+    const nav = this.shadowRoot.querySelector("#navbar");
+    let lastScroll = 0;
+
+    window.addEventListener("scroll", () => {
+      const currentScroll = window.pageYOffset;
+      const heroHeight = window.innerHeight * 0.8;
+
+      if (currentScroll > heroHeight) {
+        nav.classList.add("visible");
+      } else {
+        nav.classList.remove("visible");
+      }
+
+      lastScroll = currentScroll;
+    });
+  }
 }
 
-customElements.define('apple-nav', AppleNav);
+customElements.define("apple-nav", AppleNav);

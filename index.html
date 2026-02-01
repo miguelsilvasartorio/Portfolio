@@ -1,464 +1,1135 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en" class="scroll-smooth">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Miguel Sartório — Analista de Dados e Processos</title>
-    <meta name="description" content="Portfolio de Miguel Sartório - Analista de Dados e Processos">
-    
-    <link rel="stylesheet" href="style.css">
+    <meta
+      name="description"
+      content="Portfolio de Miguel Sartório - Analista de Dados e Processos"
+    />
+
+    <link rel="stylesheet" href="css/style.css" />
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://unpkg.com/feather-icons"></script>
     <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
-    
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        neutral: {
-                            50: '#fafafa',
-                            100: '#f5f5f5',
-                            200: '#e5e5e5',
-                            300: '#d4d4d4',
-                            400: '#a3a3a3',
-                            500: '#737373',
-                            600: '#525252',
-                            700: '#404040',
-                            800: '#262626',
-                            900: '#171717',
-                        }
-                    },
-                    fontFamily: {
-                        sans: ['Inter', 'system-ui', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'sans-serif'],
-                    },
-                    letterSpacing: {
-                        'tighter': '-0.05em',
-                        'tight': '-0.025em',
-                    }
-                }
-            }
-        }
-    </script>
-    
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    
-    <style>
-        body { font-family: 'Inter', sans-serif; }
-    </style>
-</head>
-<body class="bg-white text-neutral-900 antialiased selection:bg-neutral-900 selection:text-white">
 
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              neutral: {
+                50: "#fafafa",
+                100: "#f5f5f5",
+                200: "#e5e5e5",
+                300: "#d4d4d4",
+                400: "#a3a3a3",
+                500: "#737373",
+                600: "#525252",
+                700: "#404040",
+                800: "#262626",
+                900: "#171717",
+              },
+            },
+            fontFamily: {
+              sans: [
+                "Inter",
+                "system-ui",
+                "-apple-system",
+                "BlinkMacSystemFont",
+                "Segoe UI",
+                "Roboto",
+                "sans-serif",
+              ],
+            },
+            letterSpacing: {
+              tighter: "-0.05em",
+              tight: "-0.025em",
+            },
+          },
+        },
+      };
+    </script>
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <style>
+      body {
+        font-family: "Inter", sans-serif;
+      }
+    </style>
+  </head>
+  <body
+    class="bg-white text-neutral-900 antialiased selection:bg-neutral-900 selection:text-white"
+  >
     <!-- Navigation -->
     <script src="components/navbar.js"></script>
     <apple-nav></apple-nav>
 
     <main>
-        <!-- Hero Section -->
-        <section class="relative min-h-screen flex items-center justify-center px-6 overflow-hidden">
-            <div class="absolute inset-0 bg-gradient-to-b from-neutral-50 to-white -z-10"></div>
-            
-            <div class="max-w-5xl mx-auto text-center space-y-8 reveal-on-scroll">
-                <p class="text-sm font-medium tracking-widest text-neutral-500 uppercase mb-4">Analista de Dados e Processos</p>
-                <h1 class="text-6xl md:text-8xl lg:text-9xl font-semibold tracking-tighter leading-none text-neutral-900">
-                    Miguel<br>
-                    <span class="text-neutral-400 tracking-tight">Sartório</span>
-                </h1>
-<p class="mt-8 text-xl md:text-2xl text-neutral-600 max-w-2xl mx-auto font-light leading-relaxed">
-                    Transformar dados complexos em insights acionáveis e otimizar operações para gerar impacto mensurável nos negócios.
-                </p>
-                
-                <div class="pt-12">
-                    <a href="#sobre" class="inline-flex items-center justify-center w-12 h-12 rounded-full border border-neutral-300 text-neutral-600 hover:border-neutral-900 hover:text-neutral-900 transition-all duration-300 animate-bounce">
-                        <i data-feather="arrow-down" class="w-5 h-5"></i>
-                    </a>
-                </div>
+      <!-- Hero Section -->
+      <section
+        id="hero"
+        class="relative min-h-screen flex items-center justify-center px-6 overflow-hidden bg-gradient-to-br from-neutral-900 via-neutral-800 to-neutral-900"
+      >
+        <!-- Animated Background Elements -->
+        <div class="absolute inset-0 opacity-20">
+          <div
+            class="absolute top-1/4 left-1/4 w-96 h-96 bg-blue-500 rounded-full mix-blend-multiply filter blur-3xl animate-blob"
+          ></div>
+          <div
+            class="absolute top-1/3 right-1/4 w-96 h-96 bg-purple-500 rounded-full mix-blend-multiply filter blur-3xl animate-blob animation-delay-2000"
+          ></div>
+          <div
+            class="absolute bottom-1/4 left-1/3 w-96 h-96 bg-indigo-500 rounded-full mix-blend-multiply filter blur-3xl animate-blob animation-delay-4000"
+          ></div>
+        </div>
+
+        <!-- Grid Pattern Overlay -->
+        <div class="absolute inset-0 bg-grid-pattern opacity-10"></div>
+
+        <div
+          class="max-w-5xl mx-auto text-center space-y-8 reveal-on-scroll relative z-10"
+        >
+          <p
+            class="text-sm font-medium tracking-widest text-neutral-300 uppercase mb-4"
+          >
+            Analista de Dados e Processos
+          </p>
+
+          <!-- Name with spotlight effect -->
+          <div class="relative inline-block">
+            <!-- Animated spotlight glow -->
+            <div class="absolute inset-0 -z-10">
+              <div
+                class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[400px] bg-gradient-radial from-blue-500/30 via-purple-500/20 to-transparent rounded-full blur-3xl animate-pulse-slow"
+              ></div>
+              <div
+                class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[350px] bg-gradient-radial from-indigo-400/40 via-purple-400/20 to-transparent rounded-full blur-2xl animate-pulse-slower"
+              ></div>
             </div>
-        </section>
 
-        <!-- About Section -->
-        <section id="sobre" class="py-32 px-6 bg-white">
-            <div class="max-w-4xl mx-auto">
-                <div class="grid md:grid-cols-12 gap-12 items-start">
-                    <div class="md:col-span-4 reveal-on-scroll">
-                        <h2 class="text-sm font-semibold tracking-widest text-neutral-400 uppercase sticky top-32">Sobre mim</h2>
-                    </div>
-                    
-                    <div class="md:col-span-8 space-y-6 reveal-on-scroll delay-100">
-                        <p class="text-2xl md:text-3xl font-light leading-relaxed text-neutral-800 tracking-tight">
-                            Sou um profissional orientado a resultados e movido pela busca constante por eficiência. Meu foco é usar dados para impulsionar a melhoria contínua e a automação de processos, eliminando gargalos, reduzindo retrabalho e aumentando a produtividade operacional.
-                        </p>
-                        
-                        <p class="text-lg text-neutral-600 leading-relaxed">
-                            Atualmente em Campinas-SP, tenho experiência em empresas do setor de energia, como Neoenergia Elektro e CPFL Energia. Desempenho funções voltadas à integração de dados, automação de fluxos e otimização de processos.
-                        </p>
-                        
-                        <div class="pt-6 flex gap-6">
-                            <div class="flex items-center gap-2 text-neutral-600">
-                                <i data-feather="map-pin" class="w-4 h-4"></i>
-                                <span class="text-sm">Campinas, SP</span>
-                            </div>
-                            <div class="flex items-center gap-2 text-neutral-600">
-                                <i data-feather="mail" class="w-4 h-4"></i>
-                                <a href="mailto:miguelsilvasartorio@outlook.com" class="text-sm hover:text-neutral-900 transition-colors">miguelsilvasartorio@outlook.com</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+            <!-- Light rays -->
+            <div class="absolute inset-0 -z-20 opacity-30">
+              <div
+                class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-2 h-96 bg-gradient-to-b from-transparent via-blue-400/50 to-transparent rotate-12 animate-ray-1"
+              ></div>
+              <div
+                class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-2 h-96 bg-gradient-to-b from-transparent via-purple-400/50 to-transparent -rotate-12 animate-ray-2"
+              ></div>
+              <div
+                class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-2 h-96 bg-gradient-to-b from-transparent via-indigo-400/50 to-transparent rotate-45 animate-ray-3"
+              ></div>
             </div>
-        </section>
 
-        <!-- What I Do Section -->
-        <section id="servicos" class="py-32 px-6 bg-neutral-50">
-            <div class="max-w-6xl mx-auto">
-                <div class="text-center mb-20 reveal-on-scroll">
-                    <h2 class="text-4xl md:text-5xl font-semibold tracking-tight text-neutral-900 mb-4">O que eu faço?</h2>
-                    <p class="text-neutral-500 text-lg">Soluções pensadas diretamente para o negócio baseadas em dados</p>
-                </div>
+            <h1
+              class="text-6xl md:text-8xl lg:text-9xl font-semibold tracking-tighter leading-none text-white hero-title relative"
+            >
+              Miguel<br />
+              <span
+                class="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-purple-400 to-indigo-400 tracking-tight"
+                >Sartório</span
+              >
+            </h1>
+          </div>
 
-                <div class="grid md:grid-cols-2 gap-8">
-                    <!-- Data Analysis Card -->
-                    <div class="group bg-white rounded-3xl p-10 md:p-14 shadow-sm hover:shadow-xl transition-all duration-500 ease-out reveal-on-scroll">
-                        <div class="w-20 h-20 bg-neutral-100 rounded-2xl flex items-center justify-center mb-8 group-hover:scale-110 transition-transform duration-300">
-                            <i data-feather="bar-chart-2" class="w-10 h-10 text-neutral-700"></i>
-</div>
-                        
-                        <h3 class="text-2xl font-semibold mb-4 text-neutral-900">Análise de Dados</h3>
-                        
-                        <p class="text-neutral-600 leading-relaxed mb-6">
-                            Análises preditivas de acordo com modelos de dados, ETL, integração de bases de dados em diferentes formatos e construção de dashboards interativos via Power BI, Excel ou Tableau
-                        </p>
-                        
-                        <ul class="space-y-3 text-neutral-600">
-                            <li class="flex items-center gap-3">
-                                <span class="w-1.5 h-1.5 rounded-full bg-neutral-400"></span>
-                                <span>Modelagem e integração de bases de dados</span>
-                            </li>
-                            <li class="flex items-center gap-3">
-                                <span class="w-1.5 h-1.5 rounded-full bg-neutral-400"></span>
-                                <span>Análises preditivas</span>
-                            </li>
-                            <li class="flex items-center gap-3">
-                                <span class="w-1.5 h-1.5 rounded-full bg-neutral-400"></span>
-                                <span>Desenvolvimento de painéis interativos</span>
-                            </li>
-                        </ul>
-                    </div>
-                    <!-- Process Analysis Card -->
-                    <div class="group bg-white rounded-3xl p-10 md:p-14 shadow-sm hover:shadow-xl transition-all duration-500 ease-out reveal-on-scroll delay-100">
-                        <div class="w-20 h-20 bg-neutral-100 rounded-2xl flex items-center justify-center mb-8 group-hover:scale-110 transition-transform duration-300">
-                            <i data-feather="git-branch" class="w-10 h-10 text-neutral-700"></i>
-</div>
-                        
-                        <h3 class="text-2xl font-semibold mb-4 text-neutral-900">Otimização de Processos</h3>
-                        
-                        <p class="text-neutral-600 leading-relaxed mb-6">
-                            Mapeamento end-to-end de processos, construção de fluxogramas, automação de processos via Power Automate, Power Apps ou Python
-                        </p>
-                        
-                        <ul class="space-y-3 text-neutral-600">
-                            <li class="flex items-center gap-3">
-                                <span class="w-1.5 h-1.5 rounded-full bg-neutral-400"></span>
-                                <span>Mapeamento de processos</span>
-                            </li>
-                            <li class="flex items-center gap-3">
-                                <span class="w-1.5 h-1.5 rounded-full bg-neutral-400"></span>
-                                <span>Metodologia Lean Six Sigma</span>
-                            </li>
-                            <li class="flex items-center gap-3">
-                                <span class="w-1.5 h-1.5 rounded-full bg-neutral-400"></span>
-                                <span>Automação de processos</span>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
+          <p
+            class="mt-8 text-xl md:text-2xl text-neutral-200 max-w-2xl mx-auto font-light leading-relaxed"
+          >
+            Transformar dados complexos em insights acionáveis e otimizar
+            operações para gerar impacto mensurável nos negócios.
+          </p>
+
+          <div class="pt-12">
+            <a
+              href="#sobre"
+              class="inline-flex items-center justify-center w-12 h-12 rounded-full border-2 border-white/30 text-white hover:border-white hover:bg-white/10 transition-all duration-300 animate-bounce backdrop-blur-sm"
+            >
+              <i data-feather="arrow-down" class="w-5 h-5"></i>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!-- About Section -->
+      <section id="sobre" class="py-32 px-6 bg-white">
+        <div class="max-w-4xl mx-auto">
+          <div class="text-center mb-20 reveal-on-scroll">
+            <h2
+              class="text-4xl md:text-5xl font-semibold tracking-tight text-neutral-900 mb-4"
+            >
+              Sobre mim
+            </h2>
+            <div
+              class="w-24 h-1 bg-gradient-to-r from-blue-500 via-purple-500 to-indigo-500 mx-auto rounded-full"
+            ></div>
+          </div>
+
+          <div class="space-y-6 reveal-on-scroll delay-100">
+            <p
+              class="text-2xl md:text-3xl font-light leading-relaxed text-neutral-800 tracking-tight"
+            >
+              Sou um profissional orientado a resultados e movido pela busca
+              constante por eficiência. Meu foco é usar dados para impulsionar a
+              melhoria contínua e a automação de processos, eliminando gargalos,
+              reduzindo retrabalho e aumentando a produtividade operacional.
+            </p>
+
+            <p class="text-lg text-neutral-600 leading-relaxed">
+              Atualmente em Campinas-SP, tenho experiência em empresas do setor
+              de energia, como Neoenergia Elektro e CPFL Energia. Desempenho
+              funções voltadas à integração de dados, automação de fluxos e
+              otimização de processos.
+            </p>
+
+            <div class="pt-6 flex flex-wrap justify-center gap-6">
+              <div class="flex items-center gap-2 text-neutral-600">
+                <i data-feather="map-pin" class="w-4 h-4"></i>
+                <span class="text-sm">Campinas, SP</span>
+              </div>
+              <div class="flex items-center gap-2 text-neutral-600">
+                <i data-feather="mail" class="w-4 h-4"></i>
+                <a
+                  href="mailto:miguelsilvasartorio@outlook.com"
+                  class="text-sm hover:text-neutral-900 transition-colors"
+                  >miguelsilvasartorio@outlook.com</a
+                >
+              </div>
             </div>
-        </section>
+          </div>
+        </div>
+      </section>
 
-        <!-- Technologies Section -->
-        <section id="ferramentas" class="py-32 px-6 bg-white">
-            <div class="max-w-5xl mx-auto">
-                <div class="text-center mb-20 reveal-on-scroll">
-                    <h2 class="text-4xl md:text-5xl font-semibold tracking-tight text-neutral-900 mb-4">Ferramentas e Tecnologias</h2>
-                    <p class="text-neutral-500 text-lg">Ferramentas utilizadas para transformar negócios</p>
-                </div>
-                <div class="grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-12">
-                    <!-- Python -->
-                    <div class="tech-item group flex flex-col items-center gap-4 p-6 rounded-2xl hover:bg-neutral-50 transition-colors duration-300 reveal-on-scroll">
-                        <div class="w-16 h-16 flex items-center justify-center grayscale group-hover:grayscale-0 transition-all duration-300 opacity-70 group-hover:opacity-100 icon-wrapper">
-                            <img src="https://img.icons8.com/?size=100&id=13441&format=png&color=000000" alt="Python" class="w-12 h-12 object-contain">
-</div>
-                        <span class="text-sm font-medium text-neutral-600 group-hover:text-neutral-900">Python</span>
-                    </div>
-                    <!-- SQL -->
-                    <div class="tech-item group flex flex-col items-center gap-4 p-6 rounded-2xl hover:bg-neutral-50 transition-colors duration-300 reveal-on-scroll delay-50">
-                        <div class="w-16 h-16 flex items-center justify-center grayscale group-hover:grayscale-0 transition-all duration-300 opacity-70 group-hover:opacity-100 icon-wrapper">
-                            <img src="https://img.icons8.com/?size=100&id=J6KcaRLsTgpZ&format=png&color=000000" alt="SQL" class="w-12 h-12 object-contain">
-</div>
-                        <span class="text-sm font-medium text-neutral-600 group-hover:text-neutral-900">SQL</span>
-                    </div>
-                    <!-- Excel -->
-                    <div class="tech-item group flex flex-col items-center gap-4 p-6 rounded-2xl hover:bg-neutral-50 transition-colors duration-300 reveal-on-scroll delay-100">
-                        <div class="w-16 h-16 flex items-center justify-center grayscale group-hover:grayscale-0 transition-all duration-300 opacity-70 group-hover:opacity-100 icon-wrapper">
-                            <img src="https://img.icons8.com/?size=100&id=y5utoW4FUM92&format=png&color=000000" alt="Excel" class="w-12 h-12 object-contain">
-</div>
-                        <span class="text-sm font-medium text-neutral-600 group-hover:text-neutral-900">Excel</span>
-                    </div>
-                    <!-- Tableau -->
-                    <div class="tech-item group flex flex-col items-center gap-4 p-6 rounded-2xl hover:bg-neutral-50 transition-colors duration-300 reveal-on-scroll delay-150">
-                        <div class="w-16 h-16 flex items-center justify-center grayscale group-hover:grayscale-0 transition-all duration-300 opacity-70 group-hover:opacity-100 icon-wrapper">
-                            <img src="https://img.icons8.com/?size=100&id=9Kvi1p1F0tUo&format=png&color=000000" alt="Tableau" class="w-12 h-12 object-contain">
-</div>
-                        <span class="text-sm font-medium text-neutral-600 group-hover:text-neutral-900">Tableau</span>
-                    </div>
-                    <!-- Power BI -->
-                    <div class="tech-item group flex flex-col items-center gap-4 p-6 rounded-2xl hover:bg-neutral-50 transition-colors duration-300 reveal-on-scroll">
-                        <div class="w-16 h-16 flex items-center justify-center grayscale group-hover:grayscale-0 transition-all duration-300 opacity-70 group-hover:opacity-100 icon-wrapper">
-                            <img src="https://img.icons8.com/?size=100&id=3sGOUDo9nJ4k&format=png&color=000000" alt="Power BI" class="w-12 h-12 object-contain">
-</div>
-                        <span class="text-sm font-medium text-neutral-600 group-hover:text-neutral-900">Power BI</span>
-                    </div>
-                    <!-- Outlook -->
-                    <div class="tech-item group flex flex-col items-center gap-4 p-6 rounded-2xl hover:bg-neutral-50 transition-colors duration-300 reveal-on-scroll delay-50">
-                        <div class="w-16 h-16 flex items-center justify-center grayscale group-hover:grayscale-0 transition-all duration-300 opacity-70 group-hover:opacity-100 icon-wrapper">
-                            <img src="https://img.icons8.com/?size=100&id=RUIFhdJm8fbJ&format=png&color=000000" alt="Outlook" class="w-12 h-12 object-contain">
-</div>
-                        <span class="text-sm font-medium text-neutral-600 group-hover:text-neutral-900">Outlook</span>
-                    </div>
-                    <!-- Power Automate -->
-                    <div class="tech-item group flex flex-col items-center gap-4 p-6 rounded-2xl hover:bg-neutral-50 transition-colors duration-300 reveal-on-scroll delay-100">
-                        <div class="w-16 h-16 flex items-center justify-center grayscale group-hover:grayscale-0 transition-all duration-300 opacity-70 group-hover:opacity-100 icon-wrapper">
-                            <img src="https://img.icons8.com/?size=100&id=kTTt25v6Drpd&format=png&color=000000" alt="Power Automate" class="w-12 h-12 object-contain">
-</div>
-                        <span class="text-sm font-medium text-neutral-600 group-hover:text-neutral-900">Power Automate</span>
-                    </div>
-                    <!-- Power Apps -->
-                    <div class="tech-item group flex flex-col items-center gap-4 p-6 rounded-2xl hover:bg-neutral-50 transition-colors duration-300 reveal-on-scroll delay-150">
-                        <div class="w-16 h-16 flex items-center justify-center grayscale group-hover:grayscale-0 transition-all duration-300 opacity-70 group-hover:opacity-100 icon-wrapper">
-                            <img src="https://img.icons8.com/?size=100&id=OU2ddOKw840K&format=png&color=000000" alt="Power Apps" class="w-12 h-12 object-contain">
-</div>
-                        <span class="text-sm font-medium text-neutral-600 group-hover:text-neutral-900">Power Apps</span>
-                    </div>
-</div>
-</div>
-        </section>
+      <!-- What I Do Section -->
+      <section id="servicos" class="py-32 px-6 bg-neutral-50">
+        <div class="max-w-6xl mx-auto">
+          <div class="text-center mb-20 reveal-on-scroll">
+            <h2
+              class="text-4xl md:text-5xl font-semibold tracking-tight text-neutral-900 mb-4"
+            >
+              O que eu faço?
+            </h2>
+            <div
+              class="w-24 h-1 bg-gradient-to-r from-blue-500 via-purple-500 to-indigo-500 mx-auto rounded-full mb-4"
+            ></div>
+            <p class="text-neutral-500 text-lg">
+              Soluções pensadas diretamente para o negócio baseadas em dados
+            </p>
+          </div>
 
-        <!-- Experience Section -->
-        <section id="experiencias" class="py-32 px-6 bg-neutral-50">
-            <div class="max-w-4xl mx-auto">
-                <div class="mb-20 reveal-on-scroll">
-                    <h2 class="text-4xl md:text-5xl font-semibold tracking-tight text-neutral-900 mb-4">Experiência</h2>
-                    <p class="text-neutral-500 text-lg">Trajetória profissional e principais marcos</p>
-                </div>
+          <div class="grid md:grid-cols-2 gap-8">
+            <!-- Data Analysis Card -->
+            <div
+              class="group bg-white rounded-3xl p-10 md:p-14 shadow-sm hover:shadow-xl transition-all duration-500 ease-out reveal-on-scroll"
+            >
+              <div
+                class="w-20 h-20 bg-neutral-100 rounded-2xl flex items-center justify-center mb-8 group-hover:scale-110 transition-transform duration-300"
+              >
+                <i
+                  data-feather="bar-chart-2"
+                  class="w-10 h-10 text-neutral-700"
+                ></i>
+              </div>
 
-                <div class="space-y-12">
-                    <!-- Job 1 -->
-                    <div class="group relative bg-white rounded-3xl p-8 md:p-10 shadow-sm hover:shadow-lg transition-all duration-300 reveal-on-scroll">
-                        <div class="flex flex-col md:flex-row md:items-center justify-between mb-4">
-                            <div>
-                                <h3 class="text-xl font-semibold text-neutral-900">Analista de Dados e Processos Pleno</h3>
-                                <p class="text-neutral-600 mt-1">Destaxa</p>
-                            </div>
-                            <span class="text-sm font-medium text-neutral-400 mt-2 md:mt-0">2024 — 2025</span>
-                        </div>
-                        <p class="text-neutral-600 leading-relaxed mb-4">
-                            Análises preditivas de churn/cancelamento de assinaturas. Mapeamento e automação do processo de fechamento financeiro mensal, com extração e envio automático de mais de 100 relatórios. Análise e monitoramento do funil de conversão de novos clientes ou parceiros.
-                        </p>
-                        <div class="flex flex-wrap gap-2">
-                            <span class="px-3 py-1 bg-neutral-100 text-neutral-600 text-xs font-medium rounded-full">Python</span>
-                            <span class="px-3 py-1 bg-neutral-100 text-neutral-600 text-xs font-medium rounded-full">SQL</span>
-                            <span class="px-3 py-1 bg-neutral-100 text-neutral-600 text-xs font-medium rounded-full">Power Automate</span>
-                            <span class="px-3 py-1 bg-neutral-100 text-neutral-600 text-xs font-medium rounded-full">Power Apps</span>
-                            <span class="px-3 py-1 bg-neutral-100 text-neutral-600 text-xs font-medium rounded-full">Power BI</span>
-                            <span class="px-3 py-1 bg-neutral-100 text-neutral-600 text-xs font-medium rounded-full">Lean Six Sigma</span>
-                        </div>
-                    </div>
+              <h3 class="text-2xl font-semibold mb-4 text-neutral-900">
+                Análise de Dados
+              </h3>
 
-                    <!-- Job 2 -->
-                    <div class="group relative bg-white rounded-3xl p-8 md:p-10 shadow-sm hover:shadow-lg transition-all duration-300 reveal-on-scroll delay-100">
-                        <div class="flex flex-col md:flex-row md:items-center justify-between mb-4">
-                            <div>
-                                <h3 class="text-xl font-semibold text-neutral-900">Analista de Gestão de Ativos Pleno</h3>
-                                <p class="text-neutral-600 mt-1">CPFL Energia</p>
-                            </div>
-                            <span class="text-sm font-medium text-neutral-400 mt-2 md:mt-0">2023 — 2024</span>
-                        </div>
-                        <p class="text-neutral-600 leading-relaxed mb-4">
-                            Gestão orçamentária de CAPEX e OPEX das empresas do grupo. Análises de desempenho e cumprimento de prazos regulatórios, conformidade da base de ativos de acordo com legislação (ANEEL). Criação de ferramenta de leitura de documentos técnicos com diminuição do tempo de análise manual em cerca de 80%.
-                        </p>
-                        <div class="flex flex-wrap gap-2">
-                            <span class="px-3 py-1 bg-neutral-100 text-neutral-600 text-xs font-medium rounded-full">Power BI</span>
-                            <span class="px-3 py-1 bg-neutral-100 text-neutral-600 text-xs font-medium rounded-full">Python</span>
-                            <span class="px-3 py-1 bg-neutral-100 text-neutral-600 text-xs font-medium rounded-full">SQL</span>
-                            <span class="px-3 py-1 bg-neutral-100 text-neutral-600 text-xs font-medium rounded-full">SAP</span>
-                            <span class="px-3 py-1 bg-neutral-100 text-neutral-600 text-xs font-medium rounded-full">Excel</span>
-                        </div>
-                    </div>
+              <p class="text-neutral-600 leading-relaxed mb-6">
+                Análises preditivas de acordo com modelos de dados, ETL,
+                integração de bases de dados em diferentes formatos e construção
+                de dashboards interativos via Power BI, Excel ou Tableau
+              </p>
 
-                    <!-- Job 3 -->
-                    <div class="group relative bg-white rounded-3xl p-8 md:p-10 shadow-sm hover:shadow-lg transition-all duration-300 reveal-on-scroll delay-200">
-                        <div class="flex flex-col md:flex-row md:items-center justify-between mb-4">
-                            <div>
-                                <h3 class="text-xl font-semibold text-neutral-900">Agente de Saneamento II</h3>
-                                <p class="text-neutral-600 mt-1">SeMAE Rio Preto</p>
-                            </div>
-                            <span class="text-sm font-medium text-neutral-400 mt-2 md:mt-0">2022 — 2023</span>
-                        </div>
-                        <p class="text-neutral-600 leading-relaxed mb-4">
-                            Criação e acompanhamento de dashboards de desempenho operacional do tratamento de esgoto da cidade de São José do Rio Preto. Gestão orçamentária e gestão contratual de empresas prestadoras de serviços. Elaboração de relatórios técnicos para órgãos reguladores do saneamento.
-                        </p>
-                        <div class="flex flex-wrap gap-2">
-                            <span class="px-3 py-1 bg-neutral-100 text-neutral-600 text-xs font-medium rounded-full">Excel</span>
-                            <span class="px-3 py-1 bg-neutral-100 text-neutral-600 text-xs font-medium rounded-full">Word</span>
-                            <span class="px-3 py-1 bg-neutral-100 text-neutral-600 text-xs font-medium rounded-full">Power BI</span>
-                        </div>
-                    </div>
-
-                    <!-- Job 4 -->
-                    <div class="group relative bg-white rounded-3xl p-8 md:p-10 shadow-sm hover:shadow-lg transition-all duration-300 reveal-on-scroll delay-200">
-                        <div class="flex flex-col md:flex-row md:items-center justify-between mb-4">
-                            <div>
-                            <h3 class="text-xl font-semibold text-neutral-900">Técnico de Qualidade de Processos Jr.</h3>
-                                <p class="text-neutral-600 mt-1">Neoenergia Elektro</p>
-                            </div>
-                            <span class="text-sm font-medium text-neutral-400 mt-2 md:mt-0">2020 — 2022</span>
-                        </div>
-                        <p class="text-neutral-600 leading-relaxed mb-4">
-                            Encerramento técnico dos projetos de ampliação, preservação e manutenção da rede elétrica da distribuidora. Análise de dados relacionadas a unitização dos projetos, garantindo apontamento correto dos serviços e materiais. Capitalização de projetos, garantindo acurácia financeira e aderência às normas regulatórias.
-                        </p>
-                        <div class="flex flex-wrap gap-2">
-                            <span class="px-3 py-1 bg-neutral-100 text-neutral-600 text-xs font-medium rounded-full">Excel</span>
-                            <span class="px-3 py-1 bg-neutral-100 text-neutral-600 text-xs font-medium rounded-full">SAP</span>
-                            <span class="px-3 py-1 bg-neutral-100 text-neutral-600 text-xs font-medium rounded-full">SQL</span>
-                        </div>
-                    </div>
-
-                    <!-- Job 5 -->
-                    <div class="group relative bg-white rounded-3xl p-8 md:p-10 shadow-sm hover:shadow-lg transition-all duration-300 reveal-on-scroll delay-200">
-                        <div class="flex flex-col md:flex-row md:items-center justify-between mb-4">
-                            <div>
-                            <h3 class="text-xl font-semibold text-neutral-900">Almoxarife</h3>
-                                <p class="text-neutral-600 mt-1">Neoenergia Elektro</p>
-                            </div>
-                            <span class="text-sm font-medium text-neutral-400 mt-2 md:mt-0">2019 — 2020</span>
-                        </div>
-                        <p class="text-neutral-600 leading-relaxed mb-4">
-                            Análise de dados relacionada a controle de estoque, consumo e movimentação de materiais. Controle físico e contábil dos materiais, utilizando SAP como ERP de controle. Participação em inventários realizando contabilização e conciliação de materiais.
-                        </p>
-                        <div class="flex flex-wrap gap-2">
-                            <span class="px-3 py-1 bg-neutral-100 text-neutral-600 text-xs font-medium rounded-full">Excel</span>
-                            <span class="px-3 py-1 bg-neutral-100 text-neutral-600 text-xs font-medium rounded-full">SAP</span>
-                            <span class="px-3 py-1 bg-neutral-100 text-neutral-600 text-xs font-medium rounded-full">Logística</span>
-                        </div>
-                    </div>
-                </div>
+              <ul class="space-y-3 text-neutral-600">
+                <li class="flex items-center gap-3">
+                  <span class="w-1.5 h-1.5 rounded-full bg-neutral-400"></span>
+                  <span>Modelagem e integração de bases de dados</span>
+                </li>
+                <li class="flex items-center gap-3">
+                  <span class="w-1.5 h-1.5 rounded-full bg-neutral-400"></span>
+                  <span>Análises preditivas</span>
+                </li>
+                <li class="flex items-center gap-3">
+                  <span class="w-1.5 h-1.5 rounded-full bg-neutral-400"></span>
+                  <span>Desenvolvimento de painéis interativos</span>
+                </li>
+              </ul>
             </div>
-        </section>
+            <!-- Process Analysis Card -->
+            <div
+              class="group bg-white rounded-3xl p-10 md:p-14 shadow-sm hover:shadow-xl transition-all duration-500 ease-out reveal-on-scroll delay-100"
+            >
+              <div
+                class="w-20 h-20 bg-neutral-100 rounded-2xl flex items-center justify-center mb-8 group-hover:scale-110 transition-transform duration-300"
+              >
+                <i
+                  data-feather="git-branch"
+                  class="w-10 h-10 text-neutral-700"
+                ></i>
+              </div>
 
-        <!-- Education Section -->
-        <section id="educacao" class="py-32 px-6 bg-white">
-            <div class="max-w-4xl mx-auto">
-                <div class="mb-20 reveal-on-scroll">
-                    <h2 class="text-4xl md:text-5xl font-semibold tracking-tight text-neutral-900 mb-4">Educação</h2>
-                    <p class="text-neutral-500 text-lg">Formações acadêmicas e certificados</p>
-                </div>
+              <h3 class="text-2xl font-semibold mb-4 text-neutral-900">
+                Otimização de Processos
+              </h3>
 
-                <div class="space-y-8">
-                    <div class="flex flex-col md:flex-row gap-6 md:gap-12 items-start reveal-on-scroll">
-                        <div class="md:w-48 flex-shrink-0">
-                            <span class="text-sm font-semibold text-neutral-400">2023 — 2024</span>
-                        </div>
-                        <div class="flex-1 border-b border-neutral-100 pb-8">
-                            <h3 class="text-xl font-semibold text-neutral-900 mb-2">Tecnólogo em Processos Gerenciais</h3>
-                            <p class="text-neutral-600 mb-2">Centro Universitário Cidade Verde (UNICV)</p>
-                            <p class="text-neutral-500 text-sm">Superior Completo</p>
-                        </div>
-                    </div>
+              <p class="text-neutral-600 leading-relaxed mb-6">
+                Mapeamento end-to-end de processos, construção de fluxogramas,
+                automação de processos via Power Automate, Power Apps ou Python
+              </p>
 
-                    <div class="flex flex-col md:flex-row gap-6 md:gap-12 items-start reveal-on-scroll delay-100">
-                        <div class="md:w-48 flex-shrink-0">
-                            <span class="text-sm font-semibold text-neutral-400">2023 — 2023</span>
-                        </div>
-                        <div class="flex-1 border-b border-neutral-100 pb-8">
-                            <h3 class="text-xl font-semibold text-neutral-900 mb-2">Especialização Técnica em Gestão de Projetos</h3>
-                            <p class="text-neutral-600 mb-2">ETEC Philadelpho Gouvêa Netto</p>
-                            <p class="text-neutral-500 text-sm">Especialização</p>
-                        </div>
-                    </div>
-
-                       <div class="flex flex-col md:flex-row gap-6 md:gap-12 items-start reveal-on-scroll delay-100">
-                        <div class="md:w-48 flex-shrink-0">
-                            <span class="text-sm font-semibold text-neutral-400">2018 — 2020</span>
-                        </div>
-                        <div class="flex-1 border-b border-neutral-100 pb-8">
-                            <h3 class="text-xl font-semibold text-neutral-900 mb-2">Técnico em Eletrotécnica</h3>
-                            <p class="text-neutral-600 mb-2">Instituto Monitor</p>
-                            <p class="text-neutral-500 text-sm">Ensino técnico</p>
-                        </div>
-                    </div>
-
-                    <div class="flex flex-col md:flex-row gap-6 md:gap-12 items-start reveal-on-scroll delay-100">
-                        <div class="md:w-48 flex-shrink-0">
-                            <span class="text-sm font-semibold text-neutral-400">2018 — 2018</span>
-                        </div>
-                        <div class="flex-1 border-b border-neutral-100 pb-8">
-                            <h3 class="text-xl font-semibold text-neutral-900 mb-2">Técnico em Segurança do Trabalho</h3>
-                            <p class="text-neutral-600 mb-2">ETEC Prof. Armando José Farinazzo</p>
-                            <p class="text-neutral-500 text-sm">Ensino técnico</p>
-                        </div>
-                    </div>
-
-                    <div class="flex flex-col md:flex-row gap-6 md:gap-12 items-start reveal-on-scroll delay-200">
-                        <div class="md:w-48 flex-shrink-0">
-                            <span class="text-sm font-semibold text-neutral-400">Certificação</span>
-                        </div>
-                        <div class="flex-1">
-                            <h3 class="text-xl font-semibold text-neutral-900 mb-2">Análise de Dados</h3>
-                            <p class="text-neutral-600 mb-2">Google Data Analytics</p>
-                            <p class="text-neutral-500 text-sm">Preparação, processamento, análise e apresentação de dados.</p>
-                        </div>
-                    </div>
-                </div>
+              <ul class="space-y-3 text-neutral-600">
+                <li class="flex items-center gap-3">
+                  <span class="w-1.5 h-1.5 rounded-full bg-neutral-400"></span>
+                  <span>Mapeamento de processos</span>
+                </li>
+                <li class="flex items-center gap-3">
+                  <span class="w-1.5 h-1.5 rounded-full bg-neutral-400"></span>
+                  <span>Metodologia Lean Six Sigma</span>
+                </li>
+                <li class="flex items-center gap-3">
+                  <span class="w-1.5 h-1.5 rounded-full bg-neutral-400"></span>
+                  <span>Automação de processos</span>
+                </li>
+              </ul>
             </div>
-        </section>
+          </div>
+        </div>
+      </section>
 
-        <!-- Contact Section -->
-        <section id="contato" class="py-32 px-6 bg-neutral-900 text-white">
-            <div class="max-w-4xl mx-auto text-center">
-                <div class="reveal-on-scroll">
-                    <h2 class="text-5xl md:text-7xl font-semibold tracking-tight mb-6">Vamos trabalhar juntos</h2>
-                    <p class="text-xl text-neutral-400 mb-12 max-w-2xl mx-auto">
-                        Tem algum projeto em mente? Estou aberto a discutir novas oportunidades e desafios interessantes
+      <!-- Technologies Section -->
+      <section id="ferramentas" class="py-32 px-6 bg-white">
+        <div class="max-w-5xl mx-auto">
+          <div class="text-center mb-20 reveal-on-scroll">
+            <h2
+              class="text-4xl md:text-5xl font-semibold tracking-tight text-neutral-900 mb-4"
+            >
+              Ferramentas
+            </h2>
+            <div
+              class="w-24 h-1 bg-gradient-to-r from-blue-500 via-purple-500 to-indigo-500 mx-auto rounded-full mb-4"
+            ></div>
+            <p class="text-neutral-500 text-lg">
+              Ferramentas utilizadas para transformar negócios
+            </p>
+          </div>
+          <div class="grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-12">
+            <!-- Python -->
+            <div
+              class="tech-item group flex flex-col items-center gap-4 p-6 rounded-2xl hover:bg-neutral-50 transition-colors duration-300 reveal-on-scroll"
+            >
+              <div
+                class="w-16 h-16 flex items-center justify-center transition-all duration-300 opacity-85 group-hover:opacity-100 icon-wrapper"
+              >
+                <img
+                  src="https://img.icons8.com/?size=100&id=13441&format=png"
+                  alt="Python"
+                  class="w-12 h-12 object-contain"
+                />
+              </div>
+              <span
+                class="text-sm font-medium text-neutral-600 group-hover:text-neutral-900"
+                >Python</span
+              >
+            </div>
+            <!-- SQL -->
+            <div
+              class="tech-item group flex flex-col items-center gap-4 p-6 rounded-2xl hover:bg-neutral-50 transition-colors duration-300 reveal-on-scroll delay-50"
+            >
+              <div
+                class="w-16 h-16 flex items-center justify-center transition-all duration-300 opacity-60 group-hover:opacity-100 icon-wrapper"
+              >
+                <img
+                  src="https://img.icons8.com/?size=100&id=J6KcaRLsTgpZ&format=png"
+                  alt="SQL"
+                  class="w-12 h-12 object-contain"
+                />
+              </div>
+              <span
+                class="text-sm font-medium text-neutral-600 group-hover:text-neutral-900"
+                >SQL</span
+              >
+            </div>
+            <!-- Excel -->
+            <div
+              class="tech-item group flex flex-col items-center gap-4 p-6 rounded-2xl hover:bg-neutral-50 transition-colors duration-300 reveal-on-scroll delay-100"
+            >
+              <div
+                class="w-16 h-16 flex items-center justify-center transition-all duration-300 opacity-60 group-hover:opacity-100 icon-wrapper"
+              >
+                <img
+                  src="https://img.icons8.com/?size=100&id=y5utoW4FUM92&format=png"
+                  alt="Excel"
+                  class="w-12 h-12 object-contain"
+                />
+              </div>
+              <span
+                class="text-sm font-medium text-neutral-600 group-hover:text-neutral-900"
+                >Excel</span
+              >
+            </div>
+            <!-- Tableau -->
+            <div
+              class="tech-item group flex flex-col items-center gap-4 p-6 rounded-2xl hover:bg-neutral-50 transition-colors duration-300 reveal-on-scroll delay-150"
+            >
+              <div
+                class="w-16 h-16 flex items-center justify-center transition-all duration-300 opacity-60 group-hover:opacity-100 icon-wrapper"
+              >
+                <img
+                  src="https://img.icons8.com/?size=100&id=9Kvi1p1F0tUo&format=png&color=000000"
+                  alt="Tableau"
+                  class="w-12 h-12 object-contain"
+                />
+              </div>
+              <span
+                class="text-sm font-medium text-neutral-600 group-hover:text-neutral-900"
+                >Tableau</span
+              >
+            </div>
+            <!-- Power BI -->
+            <div
+              class="tech-item group flex flex-col items-center gap-4 p-6 rounded-2xl hover:bg-neutral-50 transition-colors duration-300 reveal-on-scroll"
+            >
+              <div
+                class="w-16 h-16 flex items-center justify-center transition-all duration-300 opacity-60 group-hover:opacity-100 icon-wrapper"
+              >
+                <img
+                  src="https://img.icons8.com/?size=100&id=3sGOUDo9nJ4k&format=png&color=000000"
+                  alt="Power BI"
+                  class="w-12 h-12 object-contain"
+                />
+              </div>
+              <span
+                class="text-sm font-medium text-neutral-600 group-hover:text-neutral-900"
+                >Power BI</span
+              >
+            </div>
+            <!-- Outlook -->
+            <div
+              class="tech-item group flex flex-col items-center gap-4 p-6 rounded-2xl hover:bg-neutral-50 transition-colors duration-300 reveal-on-scroll delay-50"
+            >
+              <div
+                class="w-16 h-16 flex items-center justify-center transition-all duration-300 opacity-60 group-hover:opacity-100 icon-wrapper"
+              >
+                <img
+                  src="https://img.icons8.com/?size=100&id=RUIFhdJm8fbJ&format=png"
+                  alt="Outlook"
+                  class="w-12 h-12 object-contain"
+                />
+              </div>
+              <span
+                class="text-sm font-medium text-neutral-600 group-hover:text-neutral-900"
+                >Outlook</span
+              >
+            </div>
+            <!-- Power Automate -->
+            <div
+              class="tech-item group flex flex-col items-center gap-4 p-6 rounded-2xl hover:bg-neutral-50 transition-colors duration-300 reveal-on-scroll delay-100"
+            >
+              <div
+                class="w-16 h-16 flex items-center justify-center transition-all duration-300 opacity-60 group-hover:opacity-100 icon-wrapper"
+              >
+                <img
+                  src="https://img.icons8.com/?size=100&id=kTTt25v6Drpd&format=png"
+                  alt="Power Automate"
+                  class="w-12 h-12 object-contain"
+                />
+              </div>
+              <span
+                class="text-sm font-medium text-neutral-600 group-hover:text-neutral-900"
+                >Power Automate</span
+              >
+            </div>
+            <!-- Power Apps -->
+            <div
+              class="tech-item group flex flex-col items-center gap-4 p-6 rounded-2xl hover:bg-neutral-50 transition-colors duration-300 reveal-on-scroll delay-150"
+            >
+              <div
+                class="w-16 h-16 flex items-center justify-center transition-all duration-300 opacity-60 group-hover:opacity-100 icon-wrapper"
+              >
+                <img
+                  src="https://img.icons8.com/?size=100&id=OU2ddOKw840K&format=png"
+                  alt="Power Apps"
+                  class="w-12 h-12 object-contain"
+                />
+              </div>
+              <span
+                class="text-sm font-medium text-neutral-600 group-hover:text-neutral-900"
+                >Power Apps</span
+              >
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Projects Section -->
+      <section id="projetos" class="py-32 px-6 bg-neutral-50 overflow-hidden">
+        <div class="max-w-7xl mx-auto">
+          <div class="text-center mb-20 reveal-on-scroll">
+            <h2
+              class="text-4xl md:text-5xl font-semibold tracking-tight text-neutral-900 mb-4"
+            >
+              Projetos Desenvolvidos
+            </h2>
+            <div
+              class="w-24 h-1 bg-gradient-to-r from-blue-500 via-purple-500 to-indigo-500 mx-auto rounded-full mb-4"
+            ></div>
+            <p class="text-neutral-500 text-lg">
+              Soluções que transformaram processos e dados em resultados
+            </p>
+          </div>
+
+          <!-- Carousel Container -->
+          <div class="relative">
+            <!-- Navigation Arrows -->
+            <button
+              id="prevBtn"
+              class="absolute left-0 top-1/2 -translate-y-1/2 z-10 w-12 h-12 bg-white rounded-full shadow-lg flex items-center justify-center text-neutral-900 hover:bg-neutral-100 transition-all duration-300 -ml-6"
+            >
+              <i data-feather="chevron-left" class="w-6 h-6"></i>
+            </button>
+            <button
+              id="nextBtn"
+              class="absolute right-0 top-1/2 -translate-y-1/2 z-10 w-12 h-12 bg-white rounded-full shadow-lg flex items-center justify-center text-neutral-900 hover:bg-neutral-100 transition-all duration-300 -mr-6"
+            >
+              <i data-feather="chevron-right" class="w-6 h-6"></i>
+            </button>
+
+            <!-- Carousel Track -->
+            <div class="carousel-container">
+              <div id="carouselTrack" class="carousel-track">
+                <!-- Project Card 1 -->
+                <div class="project-card" data-project="1">
+                  <div class="project-image">
+                    <img
+                      src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?w=800&h=600&fit=crop"
+                      alt="Customer Retention Analysis"
+                    />
+                    <div class="project-overlay">
+                      <span class="text-white text-sm font-medium"
+                        >Ver detalhes</span
+                      >
+                    </div>
+                  </div>
+                  <div class="p-6">
+                    <h3 class="text-xl font-semibold text-neutral-900 mb-2">
+                      Análise Preditiva de Churn
+                    </h3>
+                    <p class="text-neutral-600 text-sm">Python • SQL</p>
+                  </div>
+                </div>
+
+                <!-- Project Card 2 -->
+                <div class="project-card" data-project="2">
+                  <div class="project-image">
+                    <img
+                      src="https://images.unsplash.com/photo-1555949963-aa79dcee981c?w=800&h=600&fit=crop"
+                      alt="Process Automation"
+                    />
+                    <div class="project-overlay">
+                      <span class="text-white text-sm font-medium"
+                        >Ver detalhes</span
+                      >
+                    </div>
+                  </div>
+                  <div class="p-6">
+                    <h3 class="text-xl font-semibold text-neutral-900 mb-2">
+                      Automação de Fechamento Financeiro
+                    </h3>
+                    <p class="text-neutral-600 text-sm">
+                      Power Automate • Python • Excel
                     </p>
-                    <div class="flex flex-col sm:flex-row gap-4 justify-center mb-12">
-                        <a href="mailto:miguelsilvasartorio@outlook.com" class="inline-flex items-center justify-center gap-3 bg-white text-neutral-900 px-8 py-4 rounded-full font-medium text-lg hover:bg-neutral-200 transition-colors duration-300">
-                            <i data-feather="mail" class="w-5 h-5"></i>
-                            E-mail
-                        </a>
-                        <a href="https://wa.me/5517996630950" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center gap-3 bg-[#25D366] text-white px-8 py-4 rounded-full font-medium text-lg hover:bg-[#128C7E] transition-colors duration-300">
-                            <i data-feather="message-circle" class="w-5 h-5"></i>
-                            WhatsApp
-                        </a>
+                  </div>
+                </div>
+
+                <!-- Project Card 3 -->
+                <div class="project-card" data-project="3">
+                  <div class="project-image">
+                    <img
+                      src="https://images.unsplash.com/photo-1611746872915-64382b5c76da?w=800&h=600&fit=crop"
+                      alt="Data Integration"
+                    />
+                    <div class="project-overlay">
+                      <span class="text-white text-sm font-medium"
+                        >Ver detalhes</span
+                      >
                     </div>
-<div class="flex justify-center gap-8 pt-8 border-t border-neutral-800">
-                        <a href="https://www.linkedin.com/in/miguel-da-silva-sartorio/" target="_blank" rel="noopener noreferrer" class="text-neutral-400 hover:text-white transition-colors duration-300">
-                            <i data-feather="linkedin" class="w-6 h-6"></i>
-                        </a>
-                        <a href="https://github.com/miguelsilvasartorio" target="_blank" rel="noopener noreferrer" class="text-neutral-400 hover:text-white transition-colors duration-300">
-                            <i data-feather="github" class="w-6 h-6"></i>
-                       
+                  </div>
+                  <div class="p-6">
+                    <h3 class="text-xl font-semibold text-neutral-900 mb-2">
+                      Alertas de Suporte Personalizados
+                    </h3>
+                    <p class="text-neutral-600 text-sm">
+                      Python • Power Automate • Teams • Outlook
+                    </p>
+                  </div>
+                </div>
+
+                <!-- Project Card 4 -->
+                <div class="project-card" data-project="4">
+                  <div class="project-image">
+                    <img
+                      src="https://images.unsplash.com/photo-1485827404703-89b55fcc595e?w=800&h=600&fit=crop"
+                      alt="Document Analysis"
+                    />
+                    <div class="project-overlay">
+                      <span class="text-white text-sm font-medium"
+                        >Ver detalhes</span
+                      >
                     </div>
-</div>
+                  </div>
+                  <div class="p-6">
+                    <h3 class="text-xl font-semibold text-neutral-900 mb-2">
+                      Leitor de Documentos Técnicos
+                    </h3>
+                    <p class="text-neutral-600 text-sm">
+                      Python • OCR • Machine Learning
+                    </p>
+                  </div>
+                </div>
+
+                <!-- Project Card 5 -->
+                <div class="project-card" data-project="5">
+                  <div class="project-image">
+                    <img
+                      src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&h=600&fit=crop"
+                      alt="KPI Dashboard"
+                    />
+                    <div class="project-overlay">
+                      <span class="text-white text-sm font-medium"
+                        >Ver detalhes</span
+                      >
+                    </div>
+                  </div>
+                  <div class="p-6">
+                    <h3 class="text-xl font-semibold text-neutral-900 mb-2">
+                      Dashboard Integrado de Atividades
+                    </h3>
+                    <p class="text-neutral-600 text-sm">
+                      Power BI • SQL • Excel • Python
+                    </p>
+                  </div>
+                </div>
+              </div>
             </div>
-        </section>
+
+            <!-- Dots Indicator -->
+            <div
+              id="dotsContainer"
+              class="flex justify-center gap-2 mt-8"
+            ></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Project Modal -->
+      <div
+        id="projectModal"
+        class="fixed inset-0 bg-black bg-opacity-50 z-50 hidden items-center justify-center p-6 backdrop-blur-sm"
+      >
+        <div
+          class="bg-white rounded-3xl max-w-4xl w-full max-h-[90vh] overflow-y-auto shadow-2xl"
+        >
+          <div
+            class="sticky top-0 bg-white border-b border-neutral-100 px-8 py-6 flex justify-between items-center z-10"
+          >
+            <h3
+              id="modalTitle"
+              class="text-2xl font-semibold text-neutral-900"
+            ></h3>
+            <button
+              id="closeModal"
+              class="w-10 h-10 rounded-full hover:bg-neutral-100 flex items-center justify-center transition-colors"
+            >
+              <i data-feather="x" class="w-6 h-6"></i>
+            </button>
+          </div>
+          <div id="modalContent" class="p-8">
+            <!-- Content will be injected by JavaScript -->
+          </div>
+        </div>
+      </div>
+
+      <!-- Experience Section -->
+      <section id="experiencias" class="py-32 px-6 bg-white">
+        <div class="max-w-4xl mx-auto">
+          <div class="mb-20 reveal-on-scroll text-center">
+            <h2
+              class="text-4xl md:text-5xl font-semibold tracking-tight text-neutral-900 mb-4"
+            >
+              Experiências
+            </h2>
+            <div
+              class="w-24 h-1 bg-gradient-to-r from-blue-500 via-purple-500 to-indigo-500 mx-auto rounded-full mb-4"
+            ></div>
+            <p class="text-neutral-500 text-lg">
+              Trajetória profissional e principais marcos
+            </p>
+          </div>
+
+          <div class="space-y-8">
+            <!-- Job 1 -->
+            <div
+              class="group relative bg-white rounded-3xl p-8 md:p-10 shadow-md hover:shadow-xl transition-all duration-300 reveal-on-scroll border border-neutral-100"
+            >
+              <div
+                class="flex flex-col md:flex-row md:items-center justify-between mb-4"
+              >
+                <div>
+                  <h3 class="text-xl font-semibold text-neutral-900">
+                    Analista de Dados e Processos Pleno
+                  </h3>
+                  <p class="text-neutral-600 mt-1">Destaxa</p>
+                </div>
+                <span class="text-sm font-medium text-neutral-400 mt-2 md:mt-0"
+                  >2024 — 2025</span
+                >
+              </div>
+              <p class="text-neutral-600 leading-relaxed mb-4">
+                Análises preditivas de churn/cancelamento de assinaturas.
+                Mapeamento e automação do processo de fechamento financeiro
+                mensal, com extração e envio automático de mais de 100
+                relatórios. Análise e monitoramento do funil de conversão de
+                novos clientes ou parceiros.
+              </p>
+              <div class="flex flex-wrap gap-2">
+                <span
+                  class="px-3 py-1 bg-neutral-100 text-neutral-600 text-xs font-medium rounded-full"
+                  >Python</span
+                >
+                <span
+                  class="px-3 py-1 bg-neutral-100 text-neutral-600 text-xs font-medium rounded-full"
+                  >SQL</span
+                >
+                <span
+                  class="px-3 py-1 bg-neutral-100 text-neutral-600 text-xs font-medium rounded-full"
+                  >Power Automate</span
+                >
+                <span
+                  class="px-3 py-1 bg-neutral-100 text-neutral-600 text-xs font-medium rounded-full"
+                  >Power Apps</span
+                >
+                <span
+                  class="px-3 py-1 bg-neutral-100 text-neutral-600 text-xs font-medium rounded-full"
+                  >Power BI</span
+                >
+                <span
+                  class="px-3 py-1 bg-neutral-100 text-neutral-600 text-xs font-medium rounded-full"
+                  >Lean Six Sigma</span
+                >
+              </div>
+            </div>
+
+            <!-- Job 2 -->
+            <div
+              class="group relative bg-white rounded-3xl p-8 md:p-10 shadow-md hover:shadow-xl transition-all duration-300 reveal-on-scroll delay-100 border border-neutral-100"
+            >
+              <div
+                class="flex flex-col md:flex-row md:items-center justify-between mb-4"
+              >
+                <div>
+                  <h3 class="text-xl font-semibold text-neutral-900">
+                    Analista de Gestão de Ativos Pleno
+                  </h3>
+                  <p class="text-neutral-600 mt-1">CPFL Energia</p>
+                </div>
+                <span class="text-sm font-medium text-neutral-400 mt-2 md:mt-0"
+                  >2023 — 2024</span
+                >
+              </div>
+              <p class="text-neutral-600 leading-relaxed mb-4">
+                Gestão orçamentária de CAPEX e OPEX das empresas do grupo.
+                Análises de desempenho e cumprimento de prazos regulatórios,
+                conformidade da base de ativos de acordo com legislação (ANEEL).
+                Criação de ferramenta de leitura de documentos técnicos com
+                diminuição do tempo de análise manual em cerca de 80%.
+              </p>
+              <div class="flex flex-wrap gap-2">
+                <span
+                  class="px-3 py-1 bg-neutral-100 text-neutral-600 text-xs font-medium rounded-full"
+                  >Power BI</span
+                >
+                <span
+                  class="px-3 py-1 bg-neutral-100 text-neutral-600 text-xs font-medium rounded-full"
+                  >Python</span
+                >
+                <span
+                  class="px-3 py-1 bg-neutral-100 text-neutral-600 text-xs font-medium rounded-full"
+                  >SQL</span
+                >
+                <span
+                  class="px-3 py-1 bg-neutral-100 text-neutral-600 text-xs font-medium rounded-full"
+                  >SAP</span
+                >
+                <span
+                  class="px-3 py-1 bg-neutral-100 text-neutral-600 text-xs font-medium rounded-full"
+                  >Excel</span
+                >
+              </div>
+            </div>
+
+            <!-- Job 3 -->
+            <div
+              class="group relative bg-white rounded-3xl p-8 md:p-10 shadow-md hover:shadow-xl transition-all duration-300 reveal-on-scroll delay-200 border border-neutral-100"
+            >
+              <div
+                class="flex flex-col md:flex-row md:items-center justify-between mb-4"
+              >
+                <div>
+                  <h3 class="text-xl font-semibold text-neutral-900">
+                    Agente de Saneamento II
+                  </h3>
+                  <p class="text-neutral-600 mt-1">SeMAE Rio Preto</p>
+                </div>
+                <span class="text-sm font-medium text-neutral-400 mt-2 md:mt-0"
+                  >2022 — 2023</span
+                >
+              </div>
+              <p class="text-neutral-600 leading-relaxed mb-4">
+                Criação e acompanhamento de dashboards de desempenho operacional
+                do tratamento de esgoto da cidade de São José do Rio Preto.
+                Gestão orçamentária e gestão contratual de empresas prestadoras
+                de serviços. Elaboração de relatórios técnicos para órgãos
+                reguladores do saneamento.
+              </p>
+              <div class="flex flex-wrap gap-2">
+                <span
+                  class="px-3 py-1 bg-neutral-100 text-neutral-600 text-xs font-medium rounded-full"
+                  >Excel</span
+                >
+                <span
+                  class="px-3 py-1 bg-neutral-100 text-neutral-600 text-xs font-medium rounded-full"
+                  >Word</span
+                >
+                <span
+                  class="px-3 py-1 bg-neutral-100 text-neutral-600 text-xs font-medium rounded-full"
+                  >Power BI</span
+                >
+              </div>
+            </div>
+
+            <!-- Job 4 -->
+            <div
+              class="group relative bg-white rounded-3xl p-8 md:p-10 shadow-md hover:shadow-xl transition-all duration-300 reveal-on-scroll delay-200 border border-neutral-100"
+            >
+              <div
+                class="flex flex-col md:flex-row md:items-center justify-between mb-4"
+              >
+                <div>
+                  <h3 class="text-xl font-semibold text-neutral-900">
+                    Técnico de Qualidade de Processos Jr.
+                  </h3>
+                  <p class="text-neutral-600 mt-1">Neoenergia Elektro</p>
+                </div>
+                <span class="text-sm font-medium text-neutral-400 mt-2 md:mt-0"
+                  >2020 — 2022</span
+                >
+              </div>
+              <p class="text-neutral-600 leading-relaxed mb-4">
+                Encerramento técnico dos projetos de ampliação, preservação e
+                manutenção da rede elétrica da distribuidora. Análise de dados
+                relacionadas a unitização dos projetos, garantindo apontamento
+                correto dos serviços e materiais. Capitalização de projetos,
+                garantindo acurácia financeira e aderência às normas
+                regulatórias.
+              </p>
+              <div class="flex flex-wrap gap-2">
+                <span
+                  class="px-3 py-1 bg-neutral-100 text-neutral-600 text-xs font-medium rounded-full"
+                  >Excel</span
+                >
+                <span
+                  class="px-3 py-1 bg-neutral-100 text-neutral-600 text-xs font-medium rounded-full"
+                  >SAP</span
+                >
+                <span
+                  class="px-3 py-1 bg-neutral-100 text-neutral-600 text-xs font-medium rounded-full"
+                  >SQL</span
+                >
+              </div>
+            </div>
+
+            <!-- Job 5 -->
+            <div
+              class="group relative bg-white rounded-3xl p-8 md:p-10 shadow-md hover:shadow-xl transition-all duration-300 reveal-on-scroll delay-200 border border-neutral-100"
+            >
+              <div
+                class="flex flex-col md:flex-row md:items-center justify-between mb-4"
+              >
+                <div>
+                  <h3 class="text-xl font-semibold text-neutral-900">
+                    Almoxarife
+                  </h3>
+                  <p class="text-neutral-600 mt-1">Neoenergia Elektro</p>
+                </div>
+                <span class="text-sm font-medium text-neutral-400 mt-2 md:mt-0"
+                  >2019 — 2020</span
+                >
+              </div>
+              <p class="text-neutral-600 leading-relaxed mb-4">
+                Análise de dados relacionada a controle de estoque, consumo e
+                movimentação de materiais. Controle físico e contábil dos
+                materiais, utilizando SAP como ERP de controle. Participação em
+                inventários realizando contabilização e conciliação de
+                materiais.
+              </p>
+              <div class="flex flex-wrap gap-2">
+                <span
+                  class="px-3 py-1 bg-neutral-100 text-neutral-600 text-xs font-medium rounded-full"
+                  >Excel</span
+                >
+                <span
+                  class="px-3 py-1 bg-neutral-100 text-neutral-600 text-xs font-medium rounded-full"
+                  >SAP</span
+                >
+                <span
+                  class="px-3 py-1 bg-neutral-100 text-neutral-600 text-xs font-medium rounded-full"
+                  >Logística</span
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Education Section -->
+      <section id="educacao" class="py-32 px-6 bg-neutral-50">
+        <div class="max-w-4xl mx-auto">
+          <div class="mb-20 reveal-on-scroll text-center">
+            <h2
+              class="text-4xl md:text-5xl font-semibold tracking-tight text-neutral-900 mb-4"
+            >
+              Educação
+            </h2>
+            <div
+              class="w-24 h-1 bg-gradient-to-r from-blue-500 via-purple-500 to-indigo-500 mx-auto rounded-full mb-4"
+            ></div>
+            <p class="text-neutral-500 text-lg">
+              Formações acadêmicas e certificados
+            </p>
+          </div>
+
+          <div class="space-y-8">
+            <div
+              class="bg-white rounded-3xl p-8 md:p-10 shadow-md hover:shadow-xl transition-all duration-300 reveal-on-scroll border border-neutral-100"
+            >
+              <div
+                class="flex flex-col md:flex-row gap-6 md:gap-12 items-start"
+              >
+                <div class="md:w-40 flex-shrink-0">
+                  <span class="text-sm font-semibold text-neutral-400"
+                    >2023 — 2024</span
+                  >
+                </div>
+                <div class="flex-1">
+                  <h3 class="text-xl font-semibold text-neutral-900 mb-2">
+                    Tecnólogo em Processos Gerenciais
+                  </h3>
+                  <p class="text-neutral-600 mb-2">
+                    Centro Universitário Cidade Verde (UNICV)
+                  </p>
+                  <p class="text-neutral-500 text-sm">Superior Completo</p>
+                </div>
+              </div>
+            </div>
+
+            <div
+              class="bg-white rounded-3xl p-8 md:p-10 shadow-md hover:shadow-xl transition-all duration-300 reveal-on-scroll delay-100 border border-neutral-100"
+            >
+              <div
+                class="flex flex-col md:flex-row gap-6 md:gap-12 items-start"
+              >
+                <div class="md:w-40 flex-shrink-0">
+                  <span class="text-sm font-semibold text-neutral-400"
+                    >2023 — 2023</span
+                  >
+                </div>
+                <div class="flex-1">
+                  <h3 class="text-xl font-semibold text-neutral-900 mb-2">
+                    Especialização Técnica em Gestão de Projetos
+                  </h3>
+                  <p class="text-neutral-600 mb-2">
+                    ETEC Philadelpho Gouvêa Netto
+                  </p>
+                  <p class="text-neutral-500 text-sm">Especialização</p>
+                </div>
+              </div>
+            </div>
+
+            <div
+              class="bg-white rounded-3xl p-8 md:p-10 shadow-md hover:shadow-xl transition-all duration-300 reveal-on-scroll delay-150 border border-neutral-100"
+            >
+              <div
+                class="flex flex-col md:flex-row gap-6 md:gap-12 items-start"
+              >
+                <div class="md:w-40 flex-shrink-0">
+                  <span class="text-sm font-semibold text-neutral-400"
+                    >2018 — 2020</span
+                  >
+                </div>
+                <div class="flex-1">
+                  <h3 class="text-xl font-semibold text-neutral-900 mb-2">
+                    Técnico em Eletrotécnica
+                  </h3>
+                  <p class="text-neutral-600 mb-2">Instituto Monitor</p>
+                  <p class="text-neutral-500 text-sm">Ensino técnico</p>
+                </div>
+              </div>
+            </div>
+
+            <div
+              class="bg-white rounded-3xl p-8 md:p-10 shadow-md hover:shadow-xl transition-all duration-300 reveal-on-scroll delay-200 border border-neutral-100"
+            >
+              <div
+                class="flex flex-col md:flex-row gap-6 md:gap-12 items-start"
+              >
+                <div class="md:w-40 flex-shrink-0">
+                  <span class="text-sm font-semibold text-neutral-400"
+                    >2018 — 2018</span
+                  >
+                </div>
+                <div class="flex-1">
+                  <h3 class="text-xl font-semibold text-neutral-900 mb-2">
+                    Técnico em Segurança do Trabalho
+                  </h3>
+                  <p class="text-neutral-600 mb-2">
+                    ETEC Prof. Armando José Farinazzo
+                  </p>
+                  <p class="text-neutral-500 text-sm">Ensino técnico</p>
+                </div>
+              </div>
+            </div>
+
+            <div
+              class="bg-white rounded-3xl p-8 md:p-10 shadow-md hover:shadow-xl transition-all duration-300 reveal-on-scroll delay-300 border border-neutral-100"
+            >
+              <div
+                class="flex flex-col md:flex-row gap-6 md:gap-12 items-start"
+              >
+                <div class="md:w-40 flex-shrink-0">
+                  <span class="text-sm font-semibold text-neutral-400"
+                    >Certificação</span
+                  >
+                </div>
+                <div class="flex-1">
+                  <h3 class="text-xl font-semibold text-neutral-900 mb-2">
+                    Análise de Dados
+                  </h3>
+                  <p class="text-neutral-600 mb-2">Google Data Analytics</p>
+                  <p class="text-neutral-500 text-sm">
+                    Preparação, processamento, análise e apresentação de dados.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Contact Section -->
+      <section
+        id="contato"
+        class="relative py-32 px-6 overflow-hidden bg-gradient-to-br from-neutral-900 via-neutral-800 to-neutral-900 text-white"
+      >
+        <!-- Animated Background Elements -->
+        <div class="absolute inset-0 opacity-20">
+          <div
+            class="absolute top-1/4 left-1/4 w-96 h-96 bg-blue-500 rounded-full mix-blend-multiply filter blur-3xl animate-blob"
+          ></div>
+          <div
+            class="absolute top-1/3 right-1/4 w-96 h-96 bg-purple-500 rounded-full mix-blend-multiply filter blur-3xl animate-blob animation-delay-2000"
+          ></div>
+          <div
+            class="absolute bottom-1/4 left-1/3 w-96 h-96 bg-indigo-500 rounded-full mix-blend-multiply filter blur-3xl animate-blob animation-delay-4000"
+          ></div>
+        </div>
+
+        <!-- Grid Pattern Overlay -->
+        <div class="absolute inset-0 bg-grid-pattern opacity-10"></div>
+
+        <div class="max-w-4xl mx-auto text-center relative z-10">
+          <div class="reveal-on-scroll">
+            <!-- Title with spotlight effect -->
+            <div class="relative inline-block mb-6">
+              <!-- Animated spotlight glow -->
+              <div class="absolute inset-0 -z-10">
+                <div
+                  class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[300px] bg-gradient-radial from-blue-500/30 via-purple-500/20 to-transparent rounded-full blur-3xl animate-pulse-slow"
+                ></div>
+                <div
+                  class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[250px] bg-gradient-radial from-indigo-400/40 via-purple-400/20 to-transparent rounded-full blur-2xl animate-pulse-slower"
+                ></div>
+              </div>
+
+              <h2
+                class="text-5xl md:text-7xl font-semibold tracking-tight pb-4 overflow-visible"
+              >
+                <span class="text-white">Vamos trabalhar</span>
+                <span
+                  class="block text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-purple-400 to-indigo-400 pb-2"
+                  >juntos</span
+                >
+              </h2>
+            </div>
+
+            <p class="text-xl text-neutral-200 mb-12 max-w-2xl mx-auto">
+              Tem algum projeto em mente? Estou aberto a discutir novas
+              oportunidades e desafios interessantes
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center mb-12">
+              <a
+                href="mailto:miguelsilvasartorio@outlook.com"
+                class="inline-flex items-center justify-center gap-3 bg-white text-neutral-900 px-8 py-4 rounded-full font-medium text-lg hover:bg-neutral-200 transition-colors duration-300"
+              >
+                <i data-feather="mail" class="w-5 h-5"></i>
+                E-mail
+              </a>
+              <a
+                href="https://wa.me/5517996630950"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="inline-flex items-center justify-center gap-3 bg-[#25D366] text-white px-8 py-4 rounded-full font-medium text-lg hover:bg-[#128C7E] transition-colors duration-300"
+              >
+                <i data-feather="message-circle" class="w-5 h-5"></i>
+                WhatsApp
+              </a>
+            </div>
+            <div
+              class="flex justify-center gap-8 pt-8 border-t border-neutral-700/50"
+            >
+              <a
+                href="https://www.linkedin.com/in/miguel-da-silva-sartorio/"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="text-neutral-300 hover:text-white transition-colors duration-300"
+              >
+                <i data-feather="linkedin" class="w-6 h-6"></i>
+              </a>
+              <a
+                href="https://github.com/miguelsilvasartorio"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="text-neutral-300 hover:text-white transition-colors duration-300"
+              >
+                <i data-feather="github" class="w-6 h-6"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
     </main>
 
     <!-- Footer -->
     <script src="components/footer.js"></script>
     <apple-footer></apple-footer>
 
-    <script src="script.js"></script>
-    <script>feather.replace();</script>
-
-</body>
+    <script src="js/script.js"></script>
+    <script>
+      feather.replace();
+    </script>
+  </body>
 </html>

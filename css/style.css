@@ -1,136 +1,511 @@
 /* Custom Scrollbar */
 ::-webkit-scrollbar {
-    width: 8px;
+  width: 8px;
 }
 
 ::-webkit-scrollbar-track {
-    background: #fafafa;
+  background: #fafafa;
 }
 
 ::-webkit-scrollbar-thumb {
-    background: #d4d4d4;
-    border-radius: 4px;
+  background: #d4d4d4;
+  border-radius: 4px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-    background: #a3a3a3;
+  background: #a3a3a3;
 }
 
 /* Smooth Scroll Behavior */
 html {
-    scroll-behavior: smooth;
+  scroll-behavior: smooth;
 }
 
 /* Selection Color */
 ::selection {
-    background-color: #171717;
-    color: #ffffff;
+  background-color: #171717;
+  color: #ffffff;
 }
 
 /* Reveal Animation Classes */
 .reveal-on-scroll {
-    opacity: 0;
-    transform: translateY(30px);
-    transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+  opacity: 0;
+  transform: translateY(30px);
+  transition:
+    opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1),
+    transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .reveal-on-scroll.revealed {
-    opacity: 1;
-    transform: translateY(0);
+  opacity: 1;
+  transform: translateY(0);
 }
 
 /* Staggered Delays */
-.delay-100 { transition-delay: 100ms; }
-.delay-150 { transition-delay: 150ms; }
-.delay-200 { transition-delay: 200ms; }
-.delay-300 { transition-delay: 300ms; }
-.delay-500 { transition-delay: 500ms; }
-
-/* Grayscale Effects */
-.tech-item svg,
-.tech-item i {
-    filter: grayscale(100%);
-    opacity: 0.6;
-    transition: all 0.3s ease;
+.delay-100 {
+  transition-delay: 100ms;
+}
+.delay-150 {
+  transition-delay: 150ms;
 }
 
-.tech-item:hover svg,
-.tech-item:hover i {
-    filter: grayscale(0%);
+/* Hero Section Animations */
+@keyframes blob {
+  0% {
+    transform: translate(0px, 0px) scale(1);
+  }
+  33% {
+    transform: translate(30px, -50px) scale(1.1);
+  }
+  66% {
+    transform: translate(-20px, 20px) scale(0.9);
+  }
+  100% {
+    transform: translate(0px, 0px) scale(1);
+  }
+}
+
+.animate-blob {
+  animation: blob 7s infinite;
+}
+
+.animation-delay-2000 {
+  animation-delay: 2s;
+}
+
+.animation-delay-4000 {
+  animation-delay: 4s;
+}
+
+/* Grid Pattern Background */
+.bg-grid-pattern {
+  background-image:
+    linear-gradient(rgba(255, 255, 255, 0.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.05) 1px, transparent 1px);
+  background-size: 50px 50px;
+}
+
+/* Hero Title Animation */
+.hero-title {
+  animation: fadeInUp 1s ease-out;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
     opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Scroll Down Effect */
+#hero {
+  transition: opacity 0.3s ease-out;
+}
+
+/* Parallax Effect on Scroll */
+.parallax-scroll {
+  transform: translateY(0);
+  transition: transform 0.3s ease-out;
+}
+
+/* Spotlight and Light Effects */
+@keyframes pulse-slow {
+  0%,
+  100% {
+    opacity: 0.3;
+    transform: translate(-50%, -50%) scale(1);
+  }
+  50% {
+    opacity: 0.6;
+    transform: translate(-50%, -50%) scale(1.1);
+  }
+}
+
+@keyframes pulse-slower {
+  0%,
+  100% {
+    opacity: 0.4;
+    transform: translate(-50%, -50%) scale(1);
+  }
+  50% {
+    opacity: 0.7;
+    transform: translate(-50%, -50%) scale(1.15);
+  }
+}
+
+.animate-pulse-slow {
+  animation: pulse-slow 4s ease-in-out infinite;
+}
+
+.animate-pulse-slower {
+  animation: pulse-slower 6s ease-in-out infinite;
+  animation-delay: 1s;
+}
+
+/* Light Rays Animation */
+@keyframes ray-1 {
+  0%,
+  100% {
+    opacity: 0.2;
+    height: 300px;
+  }
+  50% {
+    opacity: 0.5;
+    height: 400px;
+  }
+}
+
+@keyframes ray-2 {
+  0%,
+  100% {
+    opacity: 0.3;
+    height: 350px;
+  }
+  50% {
+    opacity: 0.6;
+    height: 450px;
+  }
+}
+
+@keyframes ray-3 {
+  0%,
+  100% {
+    opacity: 0.15;
+    height: 320px;
+  }
+  50% {
+    opacity: 0.4;
+    height: 420px;
+  }
+}
+
+.animate-ray-1 {
+  animation: ray-1 3s ease-in-out infinite;
+}
+
+.animate-ray-2 {
+  animation: ray-2 4s ease-in-out infinite;
+  animation-delay: 0.5s;
+}
+
+.animate-ray-3 {
+  animation: ray-3 5s ease-in-out infinite;
+  animation-delay: 1s;
+}
+
+/* Radial Gradient Helper */
+.bg-gradient-radial {
+  background: radial-gradient(circle, var(--tw-gradient-stops));
+}
+
+.delay-200 {
+  transition-delay: 200ms;
+}
+.delay-300 {
+  transition-delay: 300ms;
+}
+.delay-500 {
+  transition-delay: 500ms;
+}
+
+/* Tech Icons - Remove background and use opacity only */
+.tech-item .icon-wrapper,
+.tech-item .icon-wrapper img {
+  background: transparent !important;
+  background-color: transparent !important;
+}
+
+.tech-item img {
+  opacity: 0.85;
+  transition: all 0.3s ease;
+}
+
+.tech-item:hover img {
+  opacity: 1;
 }
 
 /* Typography Refinements */
-h1, h2, h3, h4 {
-    text-wrap: balance;
+h1,
+h2,
+h3,
+h4 {
+  text-wrap: balance;
 }
 
 p {
-    text-wrap: pretty;
+  text-wrap: pretty;
 }
 
 /* Glassmorphism for Nav */
 .glass-nav {
-    background: rgba(255, 255, 255, 0.8);
-    backdrop-filter: blur(20px);
-    -webkit-backdrop-filter: blur(20px);
-    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
 }
 
 /* Link Hover Effects */
 a {
-    transition: all 0.2s ease;
+  transition: all 0.2s ease;
 }
 
 /* Card Hover Lift */
 .hover-lift {
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
 }
 
 .hover-lift:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 20px 40px -5px rgba(0, 0, 0, 0.1);
+  transform: translateY(-4px);
+  box-shadow: 0 20px 40px -5px rgba(0, 0, 0, 0.1);
 }
 
 /* Responsive Typography Adjustments */
 @media (max-width: 768px) {
-    .reveal-on-scroll {
-        transform: translateY(20px);
-    }
+  .reveal-on-scroll {
+    transform: translateY(20px);
+  }
+
+  /* Hero section adjustments for mobile */
+  #hero .animate-blob {
+    width: 250px !important;
+    height: 250px !important;
+  }
+
+  /* Reduce spotlight size on mobile */
+  #hero .bg-gradient-radial {
+    width: 300px !important;
+    height: 200px !important;
+  }
+
+  /* Light rays smaller on mobile */
+  .animate-ray-1,
+  .animate-ray-2,
+  .animate-ray-3 {
+    height: 200px !important;
+  }
+
+  /* Contact section adjustments */
+  #contato .animate-blob {
+    width: 250px !important;
+    height: 250px !important;
+  }
+
+  #contato .bg-gradient-radial {
+    width: 300px !important;
+    height: 150px !important;
+  }
+
+  /* Carousel adjustments */
+  .carousel-container {
+    padding: 0 8px;
+  }
+
+  .project-card {
+    min-width: 280px;
+  }
+
+  /* Navigation arrows smaller on mobile */
+  #prevBtn,
+  #nextBtn {
+    width: 40px;
+    height: 40px;
+    margin: 0 -4px;
+  }
+
+  /* Adjust padding for mobile sections */
+  section {
+    padding-top: 4rem !important;
+    padding-bottom: 4rem !important;
+  }
+
+  /* Hero title size adjustment */
+  #hero h1 {
+    font-size: 3rem !important;
+    line-height: 1.1;
+  }
+
+  /* Contact title adjustment */
+  #contato h2 {
+    font-size: 2.5rem !important;
+  }
+
+  /* Modal adjustments */
+  #projectModal .bg-white {
+    max-height: 85vh;
+    margin: 1rem;
+  }
+
+  /* Tech icons grid */
+  .tech-item {
+    padding: 1rem;
+  }
+
+  /* Cards spacing */
+  .space-y-8 > * + * {
+    margin-top: 1.5rem !important;
+  }
 }
 
 /* Reduced Motion */
 @media (prefers-reduced-motion: reduce) {
-    html {
-        scroll-behavior: auto;
-    }
-    
-    .reveal-on-scroll {
-        opacity: 1;
-        transform: none;
-        transition: none;
-    }
-    
-    * {
-        animation-duration: 0.01ms !important;
-        animation-iteration-count: 1 !important;
-        transition-duration: 0.01ms !important;
-    }
+  html {
+    scroll-behavior: auto;
+  }
+
+  .reveal-on-scroll {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
 }
 
 /* Custom Focus Styles */
 :focus-visible {
-    outline: 2px solid #171717;
-    outline-offset: 2px;
+  outline: 2px solid #171717;
+  outline-offset: 2px;
 }
 
 /* Image Loading State */
 img {
-    background: linear-gradient(110deg, #f0f0f0 8%, #f8f8f8 18%, #f0f0f0 33%);
-    background-size: 200% 100%;
+  background: linear-gradient(110deg, #f0f0f0 8%, #f8f8f8 18%, #f0f0f0 33%);
+  background-size: 200% 100%;
 }
 
 /* Timeline Dot Accent */
 .timeline-dot {
-    box-shadow: 0 0 0 4px white, 0 0 0 6px #e5e5e5;
+  box-shadow:
+    0 0 0 4px white,
+    0 0 0 6px #e5e5e5;
+}
+/* Project Carousel Styles */
+.carousel-container {
+  overflow: hidden;
+  position: relative;
+}
+
+.carousel-track {
+  display: flex;
+  gap: 2rem;
+  transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.project-card {
+  min-width: 350px;
+  max-width: 350px;
+  flex-shrink: 0;
+  background: white;
+  border-radius: 1.5rem;
+  overflow: hidden;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.project-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 40px -5px rgba(0, 0, 0, 0.15);
+}
+
+.project-image {
+  position: relative;
+  width: 100%;
+  height: 240px;
+  overflow: hidden;
+  background: #f5f5f5;
+}
+
+.project-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.project-card:hover .project-image img {
+  transform: scale(1.1);
+}
+
+.project-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.7), transparent);
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  padding: 1.5rem;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.project-card:hover .project-overlay {
+  opacity: 1;
+}
+
+/* Carousel Dots */
+#dotsContainer .dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #d4d4d4;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+#dotsContainer .dot.active {
+  width: 24px;
+  border-radius: 4px;
+  background: linear-gradient(to right, #3b82f6, #a855f7, #6366f1);
+}
+
+/* Project Modal */
+#projectModal {
+  animation: fadeIn 0.3s ease;
+}
+
+#projectModal > div {
+  animation: slideUp 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive Carousel */
+@media (max-width: 768px) {
+  .project-card {
+    min-width: 280px;
+    max-width: 280px;
+  }
+
+  .project-image {
+    height: 200px;
+  }
 }
