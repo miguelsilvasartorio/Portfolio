@@ -1,82 +1,472 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="en" class="scroll-smooth">
 <head>
-  <meta charset="UTF-8">
-  <title>Miguel Sartorio | Dados & Processos</title>
-  <link rel="stylesheet" href="css/style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Miguel Sartório — Analista de Dados e Processos</title>
+    <meta name="description" content="Portfolio de Miguel Sartório - Analista de Dados e Processos">
+    
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/feather-icons"></script>
+    <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        neutral: {
+                            50: '#fafafa',
+                            100: '#f5f5f5',
+                            200: '#e5e5e5',
+                            300: '#d4d4d4',
+                            400: '#a3a3a3',
+                            500: '#737373',
+                            600: '#525252',
+                            700: '#404040',
+                            800: '#262626',
+                            900: '#171717',
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'system-ui', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'sans-serif'],
+                    },
+                    letterSpacing: {
+                        'tighter': '-0.05em',
+                        'tight': '-0.025em',
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+    </style>
 </head>
-<body>
+<body class="bg-white text-neutral-900 antialiased selection:bg-neutral-900 selection:text-white">
 
-<header class="hero">
-  <h1>Miguel Sartorio</h1>
-  <p>Analista de Dados & Analista de Processos</p>
-  <span>Transformando dados e processos em decisões inteligentes</span>
-</header>
+    <!-- Navigation -->
+    <script src="components/navbar.js"></script>
+    <apple-nav></apple-nav>
 
-<section class="section reveal">
-  <h2>Sobre mim</h2>
-  <p>
-    Sou Analista de Dados e Analista de Processos, com mais de 5 anos de experiência
-    atuando em empresas como <strong>Neoenergia Elektro</strong> e <strong>CPFL Energia</strong>.
-    Atuo com análise de dados, automação de processos e melhoria contínua.
-  </p>
-</section>
+    <main>
+        <!-- Hero Section -->
+        <section class="relative min-h-screen flex items-center justify-center px-6 overflow-hidden">
+            <div class="absolute inset-0 bg-gradient-to-b from-neutral-50 to-white -z-10"></div>
+            
+            <div class="max-w-5xl mx-auto text-center space-y-8 reveal-on-scroll">
+                <p class="text-sm font-medium tracking-widest text-neutral-500 uppercase mb-4">Analista de Dados e Processos</p>
+                
+                <h1 class="text-6xl md:text-8xl lg:text-9xl font-semibold tracking-tighter leading-none text-neutral-900">
+                    Miguel<br>
+                    <span class="text-neutral-400">Sartório</span>
+                </h1>
+                
+                <p class="mt-8 text-xl md:text-2xl text-neutral-600 max-w-2xl mx-auto font-light leading-relaxed">
+                    Transformar dados complexos em insights acionáveis e otimizar operações para gerar impacto mensurável nos negócios.
+                </p>
+                
+                <div class="pt-12">
+                    <a href="#sobre" class="inline-flex items-center justify-center w-12 h-12 rounded-full border border-neutral-300 text-neutral-600 hover:border-neutral-900 hover:text-neutral-900 transition-all duration-300 animate-bounce">
+                        <i data-feather="arrow-down" class="w-5 h-5"></i>
+                    </a>
+                </div>
+            </div>
+        </section>
 
-<section class="section reveal">
-  <h2>O que eu faço</h2>
+        <!-- About Section -->
+        <section id="sobre" class="py-32 px-6 bg-white">
+            <div class="max-w-4xl mx-auto">
+                <div class="grid md:grid-cols-12 gap-12 items-start">
+                    <div class="md:col-span-4 reveal-on-scroll">
+                        <h2 class="text-sm font-semibold tracking-widest text-neutral-400 uppercase sticky top-32">Sobre mim</h2>
+                    </div>
+                    
+                    <div class="md:col-span-8 space-y-6 reveal-on-scroll delay-100">
+                        <p class="text-2xl md:text-3xl font-light leading-relaxed text-neutral-800 tracking-tight">
+                            Sou um profissional orientado a resultados e movido pela busca constante por eficiência. Meu foco é usar dados para impulsionar a melhoria contínua e a automação de processos, eliminando gargalos, reduzindo retrabalho e aumentando a produtividade operacional.
+                        </p>
+                        
+                        <p class="text-lg text-neutral-600 leading-relaxed">
+                            Atualmente em Campinas-SP, tenho experiência em empresas do setor de energia, como Neoenergia Elektro e CPFL Energia. Desempenho funções voltadas à integração de dados, automação de fluxos e otimização de processos.
+                        </p>
+                        
+                        <div class="pt-6 flex gap-6">
+                            <div class="flex items-center gap-2 text-neutral-600">
+                                <i data-feather="map-pin" class="w-4 h-4"></i>
+                                <span class="text-sm">Campinas, SP</span>
+                            </div>
+                            <div class="flex items-center gap-2 text-neutral-600">
+                                <i data-feather="mail" class="w-4 h-4"></i>
+                                <a href="mailto:miguelsilvasartorio@outlook.com" class="text-sm hover:text-neutral-900 transition-colors">miguelsilvasartorio@outlook.com</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-  <div class="cards">
-    <div class="card">
-      <h3>📊 Análise de Dados</h3>
-      <p>Dashboards, indicadores, automação de relatórios e apoio à decisão.</p>
-    </div>
+        <!-- What I Do Section -->
+        <section id="servicos" class="py-32 px-6 bg-neutral-50">
+            <div class="max-w-6xl mx-auto">
+                <div class="text-center mb-20 reveal-on-scroll">
+                    <h2 class="text-4xl md:text-5xl font-semibold tracking-tight text-neutral-900 mb-4">O que eu faço?</h2>
+                    <p class="text-neutral-500 text-lg">Soluções pensadas diretamente para o negócio baseadas em dados</p>
+                </div>
 
-    <div class="card">
-      <h3>⚙️ Processos</h3>
-      <p>Mapeamento, padronização, melhoria contínua e automação.</p>
-    </div>
-  </div>
-</section>
+                <div class="grid md:grid-cols-2 gap-8">
+                    <!-- Data Analysis Card -->
+                    <div class="group bg-white rounded-3xl p-10 md:p-14 shadow-sm hover:shadow-xl transition-all duration-500 ease-out reveal-on-scroll">
+                        <div class="w-16 h-16 bg-neutral-100 rounded-2xl flex items-center justify-center mb-8 group-hover:scale-110 transition-transform duration-300">
+                            <i data-feather="bar-chart-2" class="w-8 h-8 text-neutral-700"></i>
+                        </div>
+                        
+                        <h3 class="text-2xl font-semibold mb-4 text-neutral-900">Análise de Dados</h3>
+                        
+                        <p class="text-neutral-600 leading-relaxed mb-6">
+                            Análises preditivas de acordo com modelos de dados, ETL, integração de bases de dados em diferentes formatos e construção de dashboards interativos via Power BI, Excel ou Tableau
+                        </p>
+                        
+                        <ul class="space-y-3 text-neutral-600">
+                            <li class="flex items-center gap-3">
+                                <span class="w-1.5 h-1.5 rounded-full bg-neutral-400"></span>
+                                <span>Modelagem e integração de bases de dados</span>
+                            </li>
+                            <li class="flex items-center gap-3">
+                                <span class="w-1.5 h-1.5 rounded-full bg-neutral-400"></span>
+                                <span>Análises preditivas</span>
+                            </li>
+                            <li class="flex items-center gap-3">
+                                <span class="w-1.5 h-1.5 rounded-full bg-neutral-400"></span>
+                                <span>Desenvolvimento de painéis interativos</span>
+                            </li>
+                        </ul>
+                    </div>
 
-<section class="section reveal">
-  <h2>Tecnologias & Ferramentas</h2>
+                    <!-- Process Analysis Card -->
+                    <div class="group bg-white rounded-3xl p-10 md:p-14 shadow-sm hover:shadow-xl transition-all duration-500 ease-out reveal-on-scroll delay-100">
+                        <div class="w-16 h-16 bg-neutral-100 rounded-2xl flex items-center justify-center mb-8 group-hover:scale-110 transition-transform duration-300">
+                            <i data-feather="git-branch" class="w-8 h-8 text-neutral-700"></i>
+                        </div>
+                        
+                        <h3 class="text-2xl font-semibold mb-4 text-neutral-900">Otimização de Processos</h3>
+                        
+                        <p class="text-neutral-600 leading-relaxed mb-6">
+                            Mapeamento end-to-end de processos, construção de fluxogramas, automação de processos via Power Automate, Power Apps ou Python
+                        </p>
+                        
+                        <ul class="space-y-3 text-neutral-600">
+                            <li class="flex items-center gap-3">
+                                <span class="w-1.5 h-1.5 rounded-full bg-neutral-400"></span>
+                                <span>Mapeamento de processos</span>
+                            </li>
+                            <li class="flex items-center gap-3">
+                                <span class="w-1.5 h-1.5 rounded-full bg-neutral-400"></span>
+                                <span>Metodologia Lean Six Sigma</span>
+                            </li>
+                            <li class="flex items-center gap-3">
+                                <span class="w-1.5 h-1.5 rounded-full bg-neutral-400"></span>
+                                <span>Automação de processos</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-  <div class="tech-grid">
-    <div class="tech">
-      <img src="assets/logos/power_bi.png">
-      <span>Power BI</span>
-    </div>
-    <div class="tech">
-      <img src="assets/logos/python.png">
-      <span>Python</span>
-    </div>
-    <div class="tech">
-      <img src="assets/logos/sql.png">
-      <span>SQL</span>
-    </div>
-    <div class="tech">
-      <img src="assets/logos/excel.png">
-      <span>Excel</span>
-    </div>
-    <div class="tech">
-      <img src="assets/logos/power_automate.png">
-      <span>Power Automate</span>
-    </div>
-  </div>
-</section>
+        <!-- Technologies Section -->
+        <section id="ferramentas" class="py-32 px-6 bg-white">
+            <div class="max-w-5xl mx-auto">
+                <div class="text-center mb-20 reveal-on-scroll">
+                    <h2 class="text-4xl md:text-5xl font-semibold tracking-tight text-neutral-900 mb-4">Ferramentas e Tecnologias</h2>
+                    <p class="text-neutral-500 text-lg">Ferramentas utilizadas para transformar negócios</p>
+                </div>
 
-<section class="section reveal">
-  <h2>Formação</h2>
-  <ul>
-    <li>Tecnologia em Processos Gerenciais</li>
-    <li>Especialização Técnica em Gestão de Projetos</li>
-  </ul>
-</section>
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-12">
+                    <!-- Tech Items -->
+                    <div class="tech-item group flex flex-col items-center gap-4 p-6 rounded-2xl hover:bg-neutral-50 transition-colors duration-300 reveal-on-scroll">
+                        <div class="w-16 h-16 flex items-center justify-center grayscale group-hover:grayscale-0 transition-all duration-300 opacity-70 group-hover:opacity-100">
+                            <svg viewBox="0 0 24 24" class="w-10 h-10 fill-current text-neutral-800" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M14.25.18l.9.2.73.26.59.3.45.32.34.34.25.34.16.33.1.3.04.26.02.2-.01.13V8.5l-.05.63-.13.55-.21.46-.26.38-.3.31-.33.25-.35.19-.35.14-.33.1-.3.07-.26.04-.21.02H8.83l-.69.05-.59.14-.5.22-.41.27-.33.32-.27.35-.2.36-.15.37-.1.35-.07.32-.04.27-.02.21v3.06H3.17l-.21-.03-.28-.07-.32-.12-.35-.18-.36-.26-.36-.36-.35-.46-.32-.59-.28-.73-.21-.88-.14-1.05L0 11.97l.06-1.22.16-1.04.24-.87.32-.71.36-.57.4-.44.42-.33.42-.24.4-.16.36-.1.32-.05.24-.01h.16l.06.01h8.16v-.83H6.18l-.01-2.75-.02-.37.05-.34.11-.31.17-.28.25-.26.31-.23.38-.2.44-.18.51-.15.58-.12.64-.1.71-.06.77-.04.84-.02 1.27.05 1.07.13zm-6.3 1.98l-.23.33-.08.41.08.41.23.34.33.22.41.09.41-.09.33-.22.23-.34.08-.41-.08-.41-.23-.33-.33-.22-.41-.09-.41.09-.33.22zM3.74 6.69l-.29.33-.13.39.01.42.15.41.29.33.38.22.42.05.42-.08.38-.24.27-.36.14-.41.01-.42-.14-.4-.27-.34-.35-.26-.41-.14-.42.02-.41.17-.34.29zm3.47 3.25l-.41.26-.26.41-.09.42.09.42.26.41.41.26.42.09.42-.09.41-.26.26-.41.09-.42-.09-.42-.26-.41-.41-.26-.42-.09-.42.09zm3.47 3.25l-.41.26-.26.41-.09.42.09.42.26.41.41.26.42.09.42-.09.41-.26.26-.41.09-.42-.09-.42-.26-.41-.41-.26-.42-.09-.42.09zm3.47 3.25l-.41.26-.26.41-.09.42.09.42.26.41.41.26.42.09.42-.09.41-.26.26-.41.09-.42-.09-.42-.26-.41-.41-.26-.42-.09-.42.09zm3.47 3.25l-.41.26-.26.41-.09.42.09.42.26.41.41.26.42.09.42-.09.41-.26.26-.41.09-.42-.09-.42-.26-.41-.41-.26-.42-.09-.42.09zM9.37 15.57l-.37.21-.24.36-.1.42.1.42.24.35.37.22.42.07.42-.07.36-.22.24-.35.1-.42-.1-.42-.24-.36-.36-.21-.42-.07-.42.07z"/>
+                            </svg>
+                        </div>
+                        <span class="text-sm font-medium text-neutral-600 group-hover:text-neutral-900">Python</span>
+                    </div>
 
-<footer>
-  <p>© 2026 • Miguel Sartorio</p>
-</footer>
+                    <div class="tech-item group flex flex-col items-center gap-4 p-6 rounded-2xl hover:bg-neutral-50 transition-colors duration-300 reveal-on-scroll delay-50">
+                        <div class="w-16 h-16 flex items-center justify-center grayscale group-hover:grayscale-0 transition-all duration-300 opacity-70 group-hover:opacity-100">
+                            <svg viewBox="0 0 24 24" class="w-10 h-10 fill-current text-neutral-800" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/>
+                            </svg>
+                        </div>
+                        <span class="text-sm font-medium text-neutral-600 group-hover:text-neutral-900">SQL</span>
+                    </div>
 
-<script src="js/script.js"></script>
+                    <div class="tech-item group flex flex-col items-center gap-4 p-6 rounded-2xl hover:bg-neutral-50 transition-colors duration-300 reveal-on-scroll delay-100">
+                        <div class="w-16 h-16 flex items-center justify-center grayscale group-hover:grayscale-0 transition-all duration-300 opacity-70 group-hover:opacity-100">
+                            <i data-feather="table" class="w-10 h-10 text-neutral-800"></i>
+                        </div>
+                        <span class="text-sm font-medium text-neutral-600 group-hover:text-neutral-900">Excel</span>
+                    </div>
+
+                    <div class="tech-item group flex flex-col items-center gap-4 p-6 rounded-2xl hover:bg-neutral-50 transition-colors duration-300 reveal-on-scroll delay-150">
+                        <div class="w-16 h-16 flex items-center justify-center grayscale group-hover:grayscale-0 transition-all duration-300 opacity-70 group-hover:opacity-100">
+                            <i data-feather="pie-chart" class="w-10 h-10 text-neutral-800"></i>
+                        </div>
+                        <span class="text-sm font-medium text-neutral-600 group-hover:text-neutral-900">Tableau</span>
+                    </div>
+
+                    <div class="tech-item group flex flex-col items-center gap-4 p-6 rounded-2xl hover:bg-neutral-50 transition-colors duration-300 reveal-on-scroll">
+                        <div class="w-16 h-16 flex items-center justify-center grayscale group-hover:grayscale-0 transition-all duration-300 opacity-70 group-hover:opacity-100">
+                            <i data-feather="bar-chart" class="w-10 h-10 text-neutral-800"></i>
+                        </div>
+                        <span class="text-sm font-medium text-neutral-600 group-hover:text-neutral-900">Power BI</span>
+                    </div>
+
+                    <div class="tech-item group flex flex-col items-center gap-4 p-6 rounded-2xl hover:bg-neutral-50 transition-colors duration-300 reveal-on-scroll delay-50">
+                        <div class="w-16 h-16 flex items-center justify-center grayscale group-hover:grayscale-0 transition-all duration-300 opacity-70 group-hover:opacity-100">
+                            <i data-feather="database" class="w-10 h-10 text-neutral-800"></i>
+                        </div>
+                        <span class="text-sm font-medium text-neutral-600 group-hover:text-neutral-900">R</span>
+                    </div>
+
+                    <div class="tech-item group flex flex-col items-center gap-4 p-6 rounded-2xl hover:bg-neutral-50 transition-colors duration-300 reveal-on-scroll delay-100">
+                        <div class="w-16 h-16 flex items-center justify-center grayscale group-hover:grayscale-0 transition-all duration-300 opacity-70 group-hover:opacity-100">
+                            <i data-feather="cloud" class="w-10 h-10 text-neutral-800"></i>
+                        </div>
+                        <span class="text-sm font-medium text-neutral-600 group-hover:text-neutral-900">AWS</span>
+                    </div>
+
+                    <div class="tech-item group flex flex-col items-center gap-4 p-6 rounded-2xl hover:bg-neutral-50 transition-colors duration-300 reveal-on-scroll delay-150">
+                        <div class="w-16 h-16 flex items-center justify-center grayscale group-hover:grayscale-0 transition-all duration-300 opacity-70 group-hover:opacity-100">
+                            <i data-feather="layers" class="w-10 h-10 text-neutral-800"></i>
+                        </div>
+                        <span class="text-sm font-medium text-neutral-600 group-hover:text-neutral-900">Spark</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Experience Section -->
+        <section id="experiencias" class="py-32 px-6 bg-neutral-50">
+            <div class="max-w-4xl mx-auto">
+                <div class="mb-20 reveal-on-scroll">
+                    <h2 class="text-4xl md:text-5xl font-semibold tracking-tight text-neutral-900 mb-4">Experiência</h2>
+                    <p class="text-neutral-500 text-lg">Trajetória profissional e principais marcos</p>
+                </div>
+
+                <div class="space-y-12">
+                    <!-- Job 1 -->
+                    <div class="group relative bg-white rounded-3xl p-8 md:p-10 shadow-sm hover:shadow-lg transition-all duration-300 reveal-on-scroll">
+                        <div class="flex flex-col md:flex-row md:items-center justify-between mb-4">
+                            <div>
+                                <h3 class="text-xl font-semibold text-neutral-900">Analista de Dados e Processos Pleno</h3>
+                                <p class="text-neutral-600 mt-1">Destaxa</p>
+                            </div>
+                            <span class="text-sm font-medium text-neutral-400 mt-2 md:mt-0">2024 — 2025</span>
+                        </div>
+                        <p class="text-neutral-600 leading-relaxed mb-4">
+                            Análises preditivas de churn/cancelamento de assinaturas. Mapeamento e automação do processo de fechamento financeiro mensal, com extração e envio automático de mais de 100 relatórios. Análise e monitoramento do funil de conversão de novos clientes ou parceiros.
+                        </p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="px-3 py-1 bg-neutral-100 text-neutral-600 text-xs font-medium rounded-full">Python</span>
+                            <span class="px-3 py-1 bg-neutral-100 text-neutral-600 text-xs font-medium rounded-full">SQL</span>
+                            <span class="px-3 py-1 bg-neutral-100 text-neutral-600 text-xs font-medium rounded-full">Power Automate</span>
+                            <span class="px-3 py-1 bg-neutral-100 text-neutral-600 text-xs font-medium rounded-full">Power Apps</span>
+                            <span class="px-3 py-1 bg-neutral-100 text-neutral-600 text-xs font-medium rounded-full">Power BI</span>
+                            <span class="px-3 py-1 bg-neutral-100 text-neutral-600 text-xs font-medium rounded-full">Lean Six Sigma</span>
+                        </div>
+                    </div>
+
+                    <!-- Job 2 -->
+                    <div class="group relative bg-white rounded-3xl p-8 md:p-10 shadow-sm hover:shadow-lg transition-all duration-300 reveal-on-scroll delay-100">
+                        <div class="flex flex-col md:flex-row md:items-center justify-between mb-4">
+                            <div>
+                                <h3 class="text-xl font-semibold text-neutral-900">Analista de Gestão de Ativos Pleno</h3>
+                                <p class="text-neutral-600 mt-1">CPFL Energia</p>
+                            </div>
+                            <span class="text-sm font-medium text-neutral-400 mt-2 md:mt-0">2023 — 2024</span>
+                        </div>
+                        <p class="text-neutral-600 leading-relaxed mb-4">
+                            Gestão orçamentária de CAPEX e OPEX das empresas do grupo. Análises de desempenho e cumprimento de prazos regulatórios, conformidade da base de ativos de acordo com legislação (ANEEL). Criação de ferramenta de leitura de documentos técnicos com diminuição do tempo de análise manual em cerca de 80%.
+                        </p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="px-3 py-1 bg-neutral-100 text-neutral-600 text-xs font-medium rounded-full">Power BI</span>
+                            <span class="px-3 py-1 bg-neutral-100 text-neutral-600 text-xs font-medium rounded-full">Python</span>
+                            <span class="px-3 py-1 bg-neutral-100 text-neutral-600 text-xs font-medium rounded-full">SQL</span>
+                            <span class="px-3 py-1 bg-neutral-100 text-neutral-600 text-xs font-medium rounded-full">SAP</span>
+                            <span class="px-3 py-1 bg-neutral-100 text-neutral-600 text-xs font-medium rounded-full">Excel</span>
+                        </div>
+                    </div>
+
+                    <!-- Job 3 -->
+                    <div class="group relative bg-white rounded-3xl p-8 md:p-10 shadow-sm hover:shadow-lg transition-all duration-300 reveal-on-scroll delay-200">
+                        <div class="flex flex-col md:flex-row md:items-center justify-between mb-4">
+                            <div>
+                                <h3 class="text-xl font-semibold text-neutral-900">Agente de Saneamento II</h3>
+                                <p class="text-neutral-600 mt-1">SeMAE Rio Preto</p>
+                            </div>
+                            <span class="text-sm font-medium text-neutral-400 mt-2 md:mt-0">2022 — 2023</span>
+                        </div>
+                        <p class="text-neutral-600 leading-relaxed mb-4">
+                            Criação e acompanhamento de dashboards de desempenho operacional do tratamento de esgoto da cidade de São José do Rio Preto. Gestão orçamentária e gestão contratual de empresas prestadoras de serviços. Elaboração de relatórios técnicos para órgãos reguladores do saneamento.
+                        </p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="px-3 py-1 bg-neutral-100 text-neutral-600 text-xs font-medium rounded-full">Excel</span>
+                            <span class="px-3 py-1 bg-neutral-100 text-neutral-600 text-xs font-medium rounded-full">Word</span>
+                            <span class="px-3 py-1 bg-neutral-100 text-neutral-600 text-xs font-medium rounded-full">Power BI</span>
+                        </div>
+                    </div>
+
+                    <!-- Job 4 -->
+                    <div class="group relative bg-white rounded-3xl p-8 md:p-10 shadow-sm hover:shadow-lg transition-all duration-300 reveal-on-scroll delay-200">
+                        <div class="flex flex-col md:flex-row md:items-center justify-between mb-4">
+                            <div>
+                            <h3 class="text-xl font-semibold text-neutral-900">Técnico de Qualidade de Processos Jr.</h3>
+                                <p class="text-neutral-600 mt-1">Neoenergia Elektro</p>
+                            </div>
+                            <span class="text-sm font-medium text-neutral-400 mt-2 md:mt-0">2020 — 2022</span>
+                        </div>
+                        <p class="text-neutral-600 leading-relaxed mb-4">
+                            Encerramento técnico dos projetos de ampliação, preservação e manutenção da rede elétrica da distribuidora. Análise de dados relacionadas a unitização dos projetos, garantindo apontamento correto dos serviços e materiais. Capitalização de projetos, garantindo acurácia financeira e aderência às normas regulatórias.
+                        </p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="px-3 py-1 bg-neutral-100 text-neutral-600 text-xs font-medium rounded-full">Excel</span>
+                            <span class="px-3 py-1 bg-neutral-100 text-neutral-600 text-xs font-medium rounded-full">SAP</span>
+                            <span class="px-3 py-1 bg-neutral-100 text-neutral-600 text-xs font-medium rounded-full">SQL</span>
+                        </div>
+                    </div>
+
+                    <!-- Job 5 -->
+                    <div class="group relative bg-white rounded-3xl p-8 md:p-10 shadow-sm hover:shadow-lg transition-all duration-300 reveal-on-scroll delay-200">
+                        <div class="flex flex-col md:flex-row md:items-center justify-between mb-4">
+                            <div>
+                            <h3 class="text-xl font-semibold text-neutral-900">Almoxarife</h3>
+                                <p class="text-neutral-600 mt-1">Neoenergia Elektro</p>
+                            </div>
+                            <span class="text-sm font-medium text-neutral-400 mt-2 md:mt-0">2019 — 2020</span>
+                        </div>
+                        <p class="text-neutral-600 leading-relaxed mb-4">
+                            Análise de dados relacionada a controle de estoque, consumo e movimentação de materiais. Controle físico e contábil dos materiais, utilizando SAP como ERP de controle. Participação em inventários realizando contabilização e conciliação de materiais.
+                        </p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="px-3 py-1 bg-neutral-100 text-neutral-600 text-xs font-medium rounded-full">Excel</span>
+                            <span class="px-3 py-1 bg-neutral-100 text-neutral-600 text-xs font-medium rounded-full">SAP</span>
+                            <span class="px-3 py-1 bg-neutral-100 text-neutral-600 text-xs font-medium rounded-full">Logística</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Education Section -->
+        <section id="educacao" class="py-32 px-6 bg-white">
+            <div class="max-w-4xl mx-auto">
+                <div class="mb-20 reveal-on-scroll">
+                    <h2 class="text-4xl md:text-5xl font-semibold tracking-tight text-neutral-900 mb-4">Educação</h2>
+                    <p class="text-neutral-500 text-lg">Formações acadêmicas e certificados</p>
+                </div>
+
+                <div class="space-y-8">
+                    <div class="flex flex-col md:flex-row gap-6 md:gap-12 items-start reveal-on-scroll">
+                        <div class="md:w-48 flex-shrink-0">
+                            <span class="text-sm font-semibold text-neutral-400">2023 — 2024</span>
+                        </div>
+                        <div class="flex-1 border-b border-neutral-100 pb-8">
+                            <h3 class="text-xl font-semibold text-neutral-900 mb-2">Tecnólogo em Processos Gerenciais</h3>
+                            <p class="text-neutral-600 mb-2">Centro Universitário Cidade Verde (UNICV)</p>
+                            <p class="text-neutral-500 text-sm">Superior Completo</p>
+                        </div>
+                    </div>
+
+                    <div class="flex flex-col md:flex-row gap-6 md:gap-12 items-start reveal-on-scroll delay-100">
+                        <div class="md:w-48 flex-shrink-0">
+                            <span class="text-sm font-semibold text-neutral-400">2023 — 2023</span>
+                        </div>
+                        <div class="flex-1 border-b border-neutral-100 pb-8">
+                            <h3 class="text-xl font-semibold text-neutral-900 mb-2">Especialização Técnica em Gestão de Projetos</h3>
+                            <p class="text-neutral-600 mb-2">ETEC Philadelpho Gouvêa Netto</p>
+                            <p class="text-neutral-500 text-sm">Especialização</p>
+                        </div>
+                    </div>
+
+                       <div class="flex flex-col md:flex-row gap-6 md:gap-12 items-start reveal-on-scroll delay-100">
+                        <div class="md:w-48 flex-shrink-0">
+                            <span class="text-sm font-semibold text-neutral-400">2018 — 2020</span>
+                        </div>
+                        <div class="flex-1 border-b border-neutral-100 pb-8">
+                            <h3 class="text-xl font-semibold text-neutral-900 mb-2">Técnico em Eletrotécnica</h3>
+                            <p class="text-neutral-600 mb-2">Instituto Monitor</p>
+                            <p class="text-neutral-500 text-sm">Ensino técnico</p>
+                        </div>
+                    </div>
+
+                    <div class="flex flex-col md:flex-row gap-6 md:gap-12 items-start reveal-on-scroll delay-100">
+                        <div class="md:w-48 flex-shrink-0">
+                            <span class="text-sm font-semibold text-neutral-400">2018 — 2018</span>
+                        </div>
+                        <div class="flex-1 border-b border-neutral-100 pb-8">
+                            <h3 class="text-xl font-semibold text-neutral-900 mb-2">Técnico em Segurança do Trabalho</h3>
+                            <p class="text-neutral-600 mb-2">ETEC Prof. Armando José Farinazzo</p>
+                            <p class="text-neutral-500 text-sm">Ensino técnico</p>
+                        </div>
+                    </div>
+
+                    <div class="flex flex-col md:flex-row gap-6 md:gap-12 items-start reveal-on-scroll delay-200">
+                        <div class="md:w-48 flex-shrink-0">
+                            <span class="text-sm font-semibold text-neutral-400">Certificação</span>
+                        </div>
+                        <div class="flex-1">
+                            <h3 class="text-xl font-semibold text-neutral-900 mb-2">Análise de Dados</h3>
+                            <p class="text-neutral-600 mb-2">Google Data Analytics</p>
+                            <p class="text-neutral-500 text-sm">Preparação, processamento, análise e apresentação de dados.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contato" class="py-32 px-6 bg-neutral-900 text-white">
+            <div class="max-w-4xl mx-auto text-center">
+                <div class="reveal-on-scroll">
+                    <h2 class="text-5xl md:text-7xl font-semibold tracking-tight mb-6">Vamos trabalhar juntos</h2>
+                    <p class="text-xl text-neutral-400 mb-12 max-w-2xl mx-auto">
+                        Tem algum projeto em mente? Estou aberto a discutir novas oportunidades e desafios interessantes
+                    </p>
+                    <div class="flex flex-col sm:flex-row gap-4 justify-center mb-12">
+                        <a href="mailto:miguelsilvasartorio@outlook.com" class="inline-flex items-center justify-center gap-3 bg-white text-neutral-900 px-8 py-4 rounded-full font-medium text-lg hover:bg-neutral-200 transition-colors duration-300">
+                            <i data-feather="mail" class="w-5 h-5"></i>
+                            E-mail
+                        </a>
+                        <a href="https://wa.me/5517996630950" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center gap-3 bg-[#25D366] text-white px-8 py-4 rounded-full font-medium text-lg hover:bg-[#128C7E] transition-colors duration-300">
+                            <i data-feather="message-circle" class="w-5 h-5"></i>
+                            WhatsApp
+                        </a>
+                    </div>
+                    <div class="flex justify-center gap-8 pt-8 border-t border-neutral-800">
+                        <a href="https://www.linkedin.com/in/miguel-da-silva-sartorio/" target="_blank" rel="noopener noreferrer" class="text-neutral-400 hover:text-white transition-colors duration-300">
+                            <i data-feather="linkedin" class="w-6 h-6"></i>
+                        </a>
+                        <a href="https://github.com/miguelsilvasartorio" target="_blank" rel="noopener noreferrer" class="text-neutral-400 hover:text-white transition-colors duration-300">
+                            <i data-feather="github" class="w-6 h-6"></i>
+                       
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <script src="components/footer.js"></script>
+    <apple-footer></apple-footer>
+
+    <script src="script.js"></script>
+    <script>feather.replace();</script>
+<script src="https://huggingface.co/deepsite/deepsite-badge.js"></script>
 </body>
-</html>
+</html> 
